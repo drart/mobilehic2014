@@ -1,0 +1,15 @@
+# Numerous always-ignore extensions
+*.diff
+*.err
+*.orig
+*.log
+*.rej
+*.swo
+*.swp
+*.vi
+*~
+*.aux
+*.log
+*.out
+*.pdf
+*.synctex.gz
