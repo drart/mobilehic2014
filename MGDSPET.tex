@@ -16,15 +16,15 @@
 % Actually, it's up to you to strictly adhere to this author notation.
 \author{
   \alignauthor{
-  	\textbf{First Author}\\
-  	\affaddr{AuthorCo, Inc.}\\
-  	\affaddr{Authortown, PA 54321 USA}\\
-  	\email{author1@anotherco.com}
+  	\textbf{Adam Tindale}\\
+  	\affaddr{OCAD University}\\
+  	\affaddr{Toronto, ON M5T 1W1 Canada}\\
+  	\email{atindale@faculty.ocadu.ca}
   }\alignauthor{
-  	\textbf{Second Author}\\
-  	\affaddr{AuthorCo, Inc.}\\
-  	\affaddr{123 Author Ave.}\\
-  	\email{author2@anotherco.com}
+  	\textbf{Michael Cumming}\\
+  	\affaddr{OCAD University}\\
+  	\affaddr{Toronto, ON M5T 1W1 Canada}\\
+  	\email{mcumming@ocadu.ca}
   }
 }
 
@@ -36,7 +36,7 @@
 
 % Paper metadata (use plain text, for PDF inclusion and later re-using, if desired)
 \def\plaintitle{CHI LaTeX Extended Abstracts Template}
-\def\plainauthor{Luis A. Leiva}
+\def\plainauthor{Adam Tindale}
 \def\plainkeywords{Guides, instructions, author's kit, conference publications}
 \def\plaingeneralterms{Documentation, Standardization}
 
@@ -64,11 +64,7 @@
 \maketitle
 
 \begin{abstract}
-In this sample we describe the formatting requirements for various SIGCHI related submissions 
-and offer recommendations on writing for the worldwide SIGCHI readership. 
-%Do not change the page size or page settings.
-Please review this document even if you have submitted to SIGCHI conferences before, 
-some format details have changed relative to previous years.
+In this paper we describe a series of demo experiences focusing on the communication of information through low resolution vibractile and LED displays.
 \end{abstract}
 
 \keywords{\plainkeywords}
@@ -86,30 +82,11 @@ See: \url{http://www.acm.org/about/class/1998/}
 % =============================================================================
 \section{Introduction}
 % =============================================================================
-This format is to be used for submissions that are published in the conference extended abstracts.  
-We wish to give this volume a consistent, high-quality appearance. 
-We therefore ask that authors follow some simple guidelines. 
-In essence, you should format your paper exactly like this document. 
-The easiest way to do this is simply to download a template from the conference website and replace the content with your own material.
 
-
-\begin{figure}
-\hspace*{-0.4\columnwidth}% displace figure
-\parbox{1.4\columnwidth}{
-  \centering
-  \includegraphics[width=1.4\columnwidth]{sample.jpg}
-  \caption{Insert a caption below each figure. Images can "float" around body text, like this example.}
-  \label{fig:sample}
-}
-\end{figure}
 
 % =============================================================================
-\section{Copyright}
+\section{Background}
 % =============================================================================
-For publications in the CHI Extended Abstracts, copyright remains with the author.  
-The publication is not considered an archival publication; however, it does go into the ACM Digital Library. 
-Because you retain copyright, as the author you are free to use this material as you like, including submitting a paper based on this work to other conferences or journals.  
-Authors grant unrestricted permission for ACM to publish the accepted submission in the CHI Extended Abstracts without additional consideration or remuneration.
 
 
 % =============================================================================
@@ -163,8 +140,6 @@ If necessary, you may be able to use ``he" and ``she" in alternating sentences, 
 % =============================================================================
 \section{Figures}
 % =============================================================================
-The examples on this and following pages should help you get a feel for how screen-shots and other figures should be placed in the template. 
-Be sure to make images large enough so the important details are legible and clear.
 
 Your document may use color figures, which are included in the page limit; the figures must be usable when printed in black and white.
 You can use the \LaTeX's \texttt{marginpar} command to insert figures in the (right) margin side of the document (see \autoref{fig:marginparsample}).
@@ -187,46 +162,22 @@ Proprietary information may not be cited.
 Private communications should be acknowledged in the main text, not referenced  (e.g., [Robertson, personal communication]).
 
 
-\clearpage
-\marginpar{
-You may want to place some marginal notes in this page to display more information.
-\\[0.5\textheight]
-Note that marginal notes must appear in the (left) outer margin, due to the template design.
-}
-\begin{figure}
-\hspace*{-0.5\textwidth}% displace figure
-\parbox{\textwidth}{
-  \begin{center}
-  \frame{\includegraphics[width=\textwidth]{sample.jpg}}
-  \caption{A big figure. You may want to place some marginal notes in this page, as shown above. Notice also that this image resolution is quite low, as it is just an example of formatting.}
-  \label{fig:bigsample}
-  \end{center}  
-}
-\end{figure}
-
-
 % =============================================================================
-\section{Producing and testing PDF files}
+\section{Felted Wearable}
 % =============================================================================
 \marginpar{
 \begin{figure}
   \begin{center}
-  \includegraphics[width=\marginparwidth]{sample.jpg}
-  \caption{A marginal figure.}
+  \includegraphics[width=\marginparwidth]{images/P1130375.RW2.jpg}
+  \caption{A wearable interface.}
   \label{fig:marginparsample}
   \end{center}  
 \end{figure}
 }
-We recommend that you produce a PDF version of your submission well before the final deadline. 
-Besides making sure that you are able to produce a PDF, you will need to check that (a) the length of the file remains within the submission category's page limit, (b) the PDF file size is 4 megabytes or less, and (c) the file can be read and printed using Adobe Acrobat Reader. 
-Test your PDF file by viewing or printing it with the same software we will use when we receive it, Adobe Acrobat Reader Version 7. 
-This is widely available at no cost from~\cite{Acrobat7}.  
-Note that most reviewers will use a North American/European version of Acrobat reader, which cannot handle documents containing non-North American or non-European fonts (e.g. Asian fonts).  
-Please therefore do not use Asian fonts, and verify this by testing with a North American/European Acrobat reader (obtainable as above). Something as minor as including a space or punctuation character in a two-byte font can render a file unreadable.
+
 
 \section{Acknowledgements}
-We thank all DUX 2003 publications support and staff who wrote this document originally and allowed us to modify it for this conference.
-This template was based on Manas Tungare's \texttt{chi.cls}, and rewritten by Luis A. Leiva.
+We thank all the volunteers, and all publications support and staff, who wrote and provided helpful comments on previous versions of this document. This work is generously supported by the Natural Sciences and Engineering Research Council of Canada (NSERC), International Science and Technology Partnerships Canada.
 
 \balance
 \bibliographystyle{acm-sigchi}
