@@ -40,7 +40,7 @@
   }
     \vfil
     \alignauthor{
-  	\textbf{Huson Pridham}\\
+  	\textbf{Hudson Pridham}\\
   	\affaddr{OCAD University}\\
   	\affaddr{Toronto, ON M5T 1W1 Canada}\\
   	\email{hp12pk@student.ocadu.ca}
@@ -76,7 +76,7 @@
 \maketitle
 
 \begin{abstract}
-In this paper we describe a series of demo experiences focusing on the communication of information through low resolution vibractile and LED displays.
+In this paper we describe a series of demo experiences focusing on the communication of information through low resolution vibrotactile and LED displays.
 
 Transmedia games are notable for the possibilities they afford for rich multimedia narratives and innovative ways of integrating and switching between diverse media types. Simple, wearable devices are a promising way of encouraging participation with those who consume and contribute towards transmedia narratives. In this paper we explore techniques for adding simple visual and vibro-tactile patterning for children aged 8-12, which add sensory interest to gameplay as well as convey useful information about basic game dynamics and expected user interactions.
 \end{abstract}
@@ -94,39 +94,44 @@ See: \url{http://www.acm.org/about/class/1998/}
 
 
 \section{Introduction}
-% =============================================================================
-
-
-
-
-
-
-
-
-This project involves adding simple user involvement and user participation to complex transmedia narratives. Transmedia narratives are by their nature complex and multisensory. If well done, they are engaging to their viewers and can build interesting social cohorts quickly. They have the potential of explaining complex concepts and making connections between concepts in a fluid and graceful way. Yet, such narratives demand a high level of skill in their artistic conception and organization. 
+% ======================================================================
+This project involves adding simple user involvement and user participation to complex transmedia narratives. Transmedia narratives are by their nature complex and multisensory \cite{phillips_creators_2012}. If well done they engage viewers and can build interesting emergent social cohorts. They have the potential of explaining and making connections between complex concepts in a fluid and graceful way. Yet, such narratives demand a high level of skill in their artistic conception and organization. 
 
 Users wish to interact with these narratives in order to direct the narrative, to provide information demanded by the game and to acknowledge that have sufficient involvement to proceed in the game. Such interactions could easily be confusing and counter-productive to the flow of the narrative. 
 
-Transmedia attempts to switch quickly between diverse media but in a way that is interesting and engaging with their audience. It is the assumption here that adding complex user interaction on top of the sometimes challenging demands of transmedia is likely be unsuccessful and confusing to the audience. Instead, we take a different approach: we try to make the interactions very simple, such that they convey information in a way that presents few cognitive demands on the user and which the user would tend to find enjoyable and engaging even if they were not participating in a transmedia game. 
+Adding complex user interaction on top of the sometimes challenging demands of transmedia is likely be unsuccessful and confusing to its audience. 
 
-% =============================================================================
+Our demo experiences focus on an attempt to make the interactions very simple, such that they convey information in a way that presents few cognitive demands on the user and which the user would tend to find enjoyable and engaging?even if they were not participating in a transmedia game. 
+
+% ======================================================================
 \section{Background}
-% =============================================================================
+% ======================================================================
 
-\section{Interaction Points within Narratives}
-There are certain points within transmedia narratives that benefit from user interaction. These enable the viewer to engage with the game by making a choice, by stating a preference and by directing in the course of the narrative. 
+\subsection{Haptics in general}
+Ruspini provides a useful introduction to the concepts and history of haptics, the basics of haptic psychophysics and haptic devices past and present \cite{ruspini1999haptics}.
+
+MacLean \cite{maclean2009putting} discusses the potential benefits of haptic feedback as an ambient notification system. Unlike visual information, which can be obtrusive while completing a task, or sound, which can be obnoxious in a public environment, haptic feedback is usually experienced only by the user and does not directly interfere with the task at hand. 
+
+Oliveira and Maciel propose a network of haptic actuators that use a set of patterns to express elements of an environment that has obstacles and free paths and demonstrates the use of a haptic language that helps users navigate and consists of vibrotactile signs to complement or replace their vision. \cite{deusing}
+
+In Profita (2013) \cite{profita2013don} researchers reveal the results of studies completed in the United States and South Korea on the social acceptability of interacting with on-body controllers in which participants  ranked factors such as ?awkwardness? and ?coolness? of the exhibited interactions as actors performed them. This article is helpful for providing insight on social acceptability of wearable positioning as it relates to gender and culture.
+
+De Jesus Oliveira and Maciel \cite{deusing} present research towards building a hand-mounted array of haptic actuators intended to help the wearer perform a variety of tasks including orientation. They propose that the actuators could be connected to environment-aware sensors so that the actuators would vibrate in a set pattern to alert the wearer of an obstacle (or help instruct them to perform a certain task). Such haptic systems could help visually impaired users navigate. They would also enable fully sighted users to perform certain tasks without being distracted by personal technologies (i.e. using a smartphone to check a map).
+
+\subsection{Low resolution haptic arrays for use in conveying information}
+Low resolution arrays can be useful in indicating directionality and intensity of stimuli. They can also be easily programmed to indicate various game modes. 
 
 
-\section{Visual and Vibrotactile Patterning}
-Patterns need not be complex to be both engaging and useful conveyers of information. The simplest patterns are often the most compelling. 
-
-\section{How Patterns Can Affect Gameplay}
-Patterns can be engaging on their own?they can form games which themselves are capable of transmedia experiences?and they can also function as an integral parts of larger technical, artistic and social gameplay worlds. 
-
-
-% =============================================================================
+% ======================================================================
 \section{Prototypes}
-% =============================================================================
+% ======================================================================
+
+\subsection{Introduction to prototypes}
+Prototypes began as the simplest and least refined expression of a wearable or functional haptic device. The first prototype has simple linear arrangement of LED light and mobile phone type vibrating motors. When the connected to an Arduino micro-controller this band emits a rhythmic and visual sequential pattern that could conceivably could be used to notify band wearers of others in their vicinity. Although this band was perhaps the most simplistic band possible, it could in fact be functional in some minimal sense for a transmedia gaming experience. Also, such a minimal band would be inexpensive to manufacture and simple to program. 
+
+\subsection{Use cases for prototypes}
+We have identified three important use cases: 1. Detect other band wearers (wirelessly) who happen to be in the vicinity, 2. Give something of value to another wearer, 3. Exchange something of value with another wearer and 4. Give the wearer some indication of the game mode the wearer is in.
+
 \begin{figure}
   \begin{center}
   \includegraphics[width=\columnwidth]{images/P1130375.jpg}
@@ -157,6 +162,6 @@ We would like to thank Ryan Maksymic, Boris Kourtoukov, and Steve Szigeti for th
 
 \balance
 \bibliographystyle{acm-sigchi}
-\bibliography{sample}
+\bibliography{MGDSPET}
 
 \end{document}
