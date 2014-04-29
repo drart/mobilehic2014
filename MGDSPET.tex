@@ -4,7 +4,7 @@
 
 \copyrightinfo{
   Copyright is held by the author/owner(s).\\
-  \emph{MOBILEHCI'14}, April 27 -- May 2, 2013, Toronto, Canada.\\
+  \emph{MobileHCI 2014}, September 23-26 2014, Toronto, Canada.\\
   ACM 978-1-XXXX-XXXX-X/XX/XX.\\
 }
 
@@ -69,15 +69,20 @@
 \usepackage{graphicx}   % for EPS use the graphics package instead
 \usepackage{balance}    % useful for balancing the last columns
 \usepackage{bibspacing} % save vertical space in references
+\usepackage{paralist}
 
 \begin{document}
 
 \maketitle
 
 \begin{abstract}
-In this paper we describe a series of demo experiences focusing on the communication of information through low resolution vibrotactile and LED displays.
+Simple, wearable devices are a promising way of encouraging participation with those who consume and contribute to transmedia. 
 
-Simple, wearable devices are a promising way of encouraging participation with those who consume, and contribute to, media. In this paper we explore techniques for adding simple visual and vibro-tactile patterning for children aged 8-12, which add sensory interest to gameplay as well as convey useful information about basic game dynamics and expected user interactions.
+The research question that motivates this research is whether it is possible to augment in very simple ways using visual and vibrotactile patterns within transmedia games such that the gamer or device wearer is better able to understand and enjoy gameplay.
+
+We describe a series of demo experiences focusing on the communication of information through low resolution vibrotactile and LED displays.
+
+We explore techniques through use of simple visual and vibro-tactile patterning for children aged 8-12, which add sensory interest to gameplay as well as convey useful information about basic game dynamics and expected user interactions.
 \end{abstract}
 
 \keywords{\plainkeywords}
@@ -87,22 +92,48 @@ Simple, wearable devices are a promising way of encouraging participation with t
 \terms{\plaingeneralterms}
 
 
-% =============================================================================
+% ===========================================================================
 \section{Introduction}
-% =============================================================================
+% ===========================================================================
 
 %It is the assumption here that adding complex user interaction on top of the sometimes challenging demands of transmedia is likely be unsuccessful and confusing to the audience. Instead, we take a different approach: we try to make the interactions very simple, such that they convey information in a way that presents few cognitive demands on the user and which the user would tend to find enjoyable and engaging even if they were not participating in a transmedia game. 
 
-This project involves adding simple user involvement and user participation to complex transmedia narratives. Transmedia narratives are by their nature complex and multisensory \cite{phillips_creators_2012}. If well done they engage viewers and can build interesting emergent social cohorts. They have the potential of explaining and making connections between complex concepts in a fluid and graceful way. Yet, such narratives demand a high level of skill in their artistic conception and organization. 
+This project involves adding simple user involvement and user participation to complex transmedia games and their accompanying narratives.  
 
-Users wish to interact with these narratives in order to direct the narrative, to provide information demanded by the game and to acknowledge that have sufficient involvement to proceed in the game. Such interactions could easily be confusing and counter-productive to the flow of the narrative. 
+Transmedia games are one in which the viewer switches between various media types in a fluid and natural way in such a way that narratives become richer and involve more of the senses. Transmedia narratives are by their nature complex and multisensory \cite{phillips_creators_2012}. 
 
-Adding complex user interaction on top of the sometimes challenging demands of transmedia is likely be unsuccessful and confusing to its audience. 
+If well done they engage viewers and can build interesting, emergent social cohorts. They have the potential of explaining and making connections between complex concepts in a fluid and graceful way. However, because of this fluidity of structure they demand a high level of skill in their artistic conception and organization. 
 
-Our demo experiences focus on an attempt to make the interactions very simple, such that they convey information in a way that presents few cognitive demands on the user and which the user would tend to find enjoyable and engaging?even if they were not participating in a transmedia game. 
+Users wish to interact with these narratives in order to direct the narrative, to provide information demanded by the game and to acknowledge that have sufficient involvement to proceed with the game. Such interactions should not be confusing or counter-productive to the flow of the narrative. 
+
+The basic device use cases that might inform the gamer during gameplay, which also could apply to a viewer navigating through a narrative, are: 
+\begin{inparaenum}[\itshape a\upshape)]
+  \item what is my current position or state within the game?
+  \item do I need to make any decisions or choices in order to proceed with the game?
+  \item is anything else happening in the game of which I should be aware? and,
+  \item what comes next in the game? 
+\end{inparaenum}
+
+In addition to the gaming or narrative aspects, within social transmedia games such as Time Tremors there are also social interactions with other gamers in which gameplay is influenced greatly by the actions of others. 
+
+Time Tremors is also a collections-type game in which gamers collect items of value both within the game and also by getting items from other gamers. 
+
+For the social and collection aspects of a game like Time Tremors we have identified several important use cases: 
+\begin{inparaenum}[\itshape a\upshape)]
+\item detect other band wearers (wirelessly) who happen to be in the vicinity
+\item give something of value to another wearer, 
+\item exchange something of value with another wearer, and
+\item give the wearer some indication of the game mode the wearer is in.
+\end{inparaenum}
+
+Therefore, in Time Tremors type games, which is typical of transmedia game in general, many things are going on simultaneously: there is complex navigation through a graph of narrative possibilities, there are social interactions within other gamers also experiencing related narratives in their own way, and finally there is a artefact-based collection aspect in which items of value are collected and exchanged between gamers. 
+
+Such complexity could easily get out of hand. Instead, our goal is to create integrated user experiences that are simple and enjoyable. Our goal is despite how complex the game mechanics might be the device and how to use it remain relatively simple and straightforward.
+
+Our demo experiences focus on an attempt to make the interactions very simple, such that they convey information in a way that presents few cognitive demands on the user and which the user would tend to find enjoyable and engaging.
 
 % ======================================================================
-\section{Background}
+\section{Related Work}
 % ======================================================================
 
 \subsection{Haptics in general}
@@ -110,24 +141,24 @@ Ruspini provides a useful introduction to the concepts and history of haptics, t
 
 MacLean \cite{maclean2009putting} discusses the potential benefits of haptic feedback as an ambient notification system. Unlike visual information, which can be obtrusive while completing a task, or sound, which can be obnoxious in a public environment, haptic feedback is usually experienced only by the user and does not directly interfere with the task at hand. 
 
-Oliveira and Maciel propose a network of haptic actuators that use a set of patterns to express elements of an environment that has obstacles and free paths and demonstrates the use of a haptic language that helps users navigate and consists of vibrotactile signs to complement or replace their vision. \cite{deusing}
-
 In Profita (2013) \cite{profita2013don} researchers reveal the results of studies completed in the United States and South Korea on the social acceptability of interacting with on-body controllers in which participants  ranked factors such as ?awkwardness? and ?coolness? of the exhibited interactions as actors performed them. This article is helpful for providing insight on social acceptability of wearable positioning as it relates to gender and culture.
 
-De Jesus Oliveira and Maciel \cite{deusing} present research towards building a hand-mounted array of haptic actuators intended to help the wearer perform a variety of tasks including orientation. They propose that the actuators could be connected to environment-aware sensors so that the actuators would vibrate in a set pattern to alert the wearer of an obstacle (or help instruct them to perform a certain task). Such haptic systems could help visually impaired users navigate. They would also enable fully sighted users to perform certain tasks without being distracted by personal technologies (i.e. using a smartphone to check a map).
+Oliveira and Maciel propose a network of haptic actuators that use a set of patterns to express elements of an environment that has obstacles and free paths and demonstrates the use of a haptic language that helps users navigate and consists of vibrotactile signs to complement or replace their vision. \cite{Jesus-Oliveira:2013aa}
+
+De Jesus Oliveira and Maciel \cite{Jesus-Oliveira:2013aa} present research towards building a hand-mounted array of haptic actuators intended to help the wearer perform a variety of tasks including orientation. They propose that the actuators could be connected to environment-aware sensors so that the actuators would vibrate in a set pattern to alert the wearer of an obstacle (or help instruct them to perform a certain task). Such haptic systems could help visually impaired users navigate. They would also enable fully sighted users to perform certain tasks without being distracted by personal technologies (i.e. using a smartphone to check a map).
 
 \subsection{Low resolution haptic arrays for use in conveying information}
 Low resolution arrays can be useful in indicating directionality and intensity of stimuli. They can also be easily programmed to indicate various game modes. 
 
 % ======================================================================
-\section{Prototypes}
+\section{Prototypes and Case Studies}
 % ======================================================================
 
-\subsection{Introduction to prototypes}
+
+\subsection{ Development of prototypes}
 Prototypes began as the simplest and least refined expression of a wearable or functional haptic device. The first prototype has simple linear arrangement of LED light and mobile phone type vibrating motors. When the connected to an Arduino micro-controller this band emits a rhythmic and visual sequential pattern that could conceivably could be used to notify band wearers of others in their vicinity. Although this band was perhaps the most simplistic band possible, it could in fact be functional in some minimal sense for a transmedia gaming experience. Also, such a minimal band would be inexpensive to manufacture and simple to program. 
 
-\subsection{Use cases for prototypes}
-We have identified three important use cases: 1. Detect other band wearers (wirelessly) who happen to be in the vicinity, 2. Give something of value to another wearer, 3. Exchange something of value with another wearer and 4. Give the wearer some indication of the game mode the wearer is in.
+
 
 \begin{figure}
   \begin{center}
@@ -146,7 +177,8 @@ We have identified three important use cases: 1. Detect other band wearers (wire
   \end{center}  
 \end{figure}
 
-\section{Conclusions}
+\section{Discussion and Conclusions}
+
 
 \section{Future Work}
 Wearable devices and associated technologies for developing is developing at a rapid pace.
