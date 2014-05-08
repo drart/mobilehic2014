@@ -75,6 +75,7 @@
 \usepackage{balance}    % useful for balancing the last columns
 \usepackage{bibspacing} % save vertical space in references
 \usepackage{paralist}
+\usetikzlibrary{shapes,arrows}
 
 \begin{document}
 
@@ -83,7 +84,7 @@
 \begin{abstract}
 %Simple, wearable devices are a promising way of encouraging participation with those who consume, and contribute to, media. 
 
-In this paper we explore techniques for adding simple visual and vibro-tactile patterning for children aged 8-12, which add sensory interest to gameplay as well as convey useful information about basic game dynamics and expected user interactions. In this paper we describe a series of demo experiences focusing on the communication of information through low resolution vibrotactile and LED displays.
+In this paper we describe a series of demo experiences focusing on the communication of information through low resolution vibrotactile and LED displays. The intended purpose for this exploration is to add simple visual and vibro-tactile patterning to wearable devices intended for children aged 8-12, which add sensory interest to these devices and convey useful information about device dynamics and expected user interactions. 
 
 \end{abstract}
 
@@ -97,63 +98,88 @@ In this paper we explore techniques for adding simple visual and vibro-tactile p
 \section{Introduction}
 % ===========================================================================
 
-
-%SAMPLE TIKZ DIAGRAM 01
-%\begin{figure}
-%  \begin{center}
-%\begin{tikzpicture}
-%
-%\def \n {5}
-%\def \radius {3cm}
-%\def \margin {8} % margin in angles, depends on the radius
-%
-%\foreach \s in {1,...,\n}
-%{
-%  \node[draw, circle] at ({360/\n * (\s - 1)}:\radius) {$\s$};
-%  \draw[->, >=latex] ({360/\n * (\s - 1)+\margin}:\radius) 
-%    arc ({360/\n * (\s - 1)+\margin}:{360/\n * (\s)-\margin}:\radius);
-%}
-%\end{tikzpicture}
-%  \caption{A simple diagram of a cycle.}
-%  \label{fig:cycle}
-%    \end{center}
-%\end{figure}
-
-%SAMPLE TIKZ DIAGRAM 02
-\begin{figure}
-  \begin{center}
-\begin{tikzpicture}
-
-\draw[step=1cm,gray,very thin] (0,0) grid (8,3);
-\draw (0.7,0.5) -> (4,0.5);
-\draw (0.5,0.5) circle (0.2cm); \draw (0.5,1.5) circle (0.2cm); \draw (0.5,2.5) circle (0.2cm); 
-\draw (1.5,0.5) circle (0.2cm); \draw (1.5,1.5) circle (0.2cm); \draw (1.5,2.5) circle (0.2cm); 
-\draw (2.5,0.5) circle (0.2cm); \draw (2.5,1.5) circle (0.2cm); \draw (2.5,2.5) circle (0.2cm); 
-\draw (3.5,0.5) circle (0.2cm); \draw (3.5,1.5) circle (0.2cm); \draw (3.5,2.5) circle (0.2cm); 
-\draw (4.5,0.5) circle (0.2cm); \draw (4.5,1.5) circle (0.2cm); \draw (4.5,2.5) circle (0.2cm); 
-\draw (5.5,0.5) circle (0.2cm); \draw (5.5,1.5) circle (0.2cm); \draw (5.5,2.5) circle (0.2cm); 
-\draw (6.5,0.5) circle (0.2cm); \draw (6.5,1.5) circle (0.2cm); \draw (6.5,2.5) circle (0.2cm); 
-\draw (7.5,0.5) circle (0.2cm); \draw (7.5,1.5) circle (0.2cm); \draw (7.5,2.5) circle (0.2cm); 
-
-\end{tikzpicture}
-  \caption{A grid of buttons, LED lights and vibrating motors.}
-  \label{fig:sample}
-    \end{center}
-\end{figure}
-
-
-
-
-The research question we address in this paper concerns whether it is possible to create a wearable gaming experience that involves simple visual and vibrotactile patterns. 
-
-Some  research questions involved are:
+The research question we address in this paper concerns whether it is possible to create wearable gaming experiences that involves simple visual and vibrotactile patterns. Some  research questions of interest to us are:
 \begin{inparaenum}[\itshape a\upshape)]
 \item what types of pattern for wearable devices are appropriate?
-\item what is the best function for these patterns? and
+\item what is the best function for these patterns?
+\item what kinds of haptic patterns can be created using a minimal number of actuators?
+\item how can haptic actuators interact with buttons and lights?
 \item is the best way to employ these patterns for the conveyance of information or for some other purpose?
 \end{inparaenum}
 
-What then is a simple pattern? These are ones that involve the use of simple lights and vibrating motors. They can be activated or interacted with using buttons. These are the basic components we are using. These elements may be in a variety of 1D, 2D, or 3D arrays. The patterns involve some kind of order that is apparent either visually or by touch. The patterns generated may involve movement and may have directionality. These patterns may be useful in the conveyance of some information, such as the state of a game, a device or the gamer. The pattern may also be a signalling device to make the gamer aware of some situation within her gaming or external environment.
+What then is a simple pattern? I could be as simple a one dimensional (1D) line of LED lights. 
+
+\subsection{Some examples of simple patterns}
+\bigskip
+\begin{figure}
+  	\begin{center}
+	\begin{tikzpicture}
+	%green LEDs
+	\draw[step=1cm,gray,very thin] (0,0) grid (8,1);
+	\filldraw[fill=green, draw=black] (0.5,0.5) circle (0.12cm);
+	\filldraw[fill=green, draw=black] (2.5,0.5) circle (0.12cm);
+	\filldraw[fill=green, draw=black] (4.5,0.5) circle (0.12cm);
+	\filldraw[fill=green, draw=black] (6.5,0.5) circle (0.12cm);
+	%red LEDs
+	\filldraw[fill=red, draw=black] (1.5,0.5) circle (0.12cm);
+	\filldraw[fill=red, draw=black] (3.5,0.5) circle (0.12cm);
+	\filldraw[fill=red, draw=black] (5.5,0.5) circle (0.12cm);
+	\filldraw[fill=red, draw=black] (7.5,0.5) circle (0.12cm);
+
+	\end{tikzpicture}
+  	\caption{1D grid of green and red LED lights.}
+  	\label{fig:1D}
+    	\end{center}
+\end{figure}
+
+The next steps are simple 2D grids of LED lights, buttons and vibro-tactile actuators. 
+\bigskip
+\begin{figure}
+  	\begin{center}
+	\begin{tikzpicture}
+	%green LEDs
+	\draw[step=1cm,gray,very thin] (0,0) grid (8,3);
+	\filldraw[fill=green, draw=black] (0.5,1.5) circle (0.12cm);
+	\filldraw[fill=green, draw=black] (2.5,1.5) circle (0.12cm);
+	\filldraw[fill=green, draw=black] (4.5,1.5) circle (0.12cm);
+	\filldraw[fill=green, draw=black] (6.5,1.5) circle (0.12cm);
+	%red LEDs
+	\filldraw[fill=red, draw=black] (1.5,1.5) circle (0.12cm);
+	\filldraw[fill=red, draw=black] (3.5,1.5) circle (0.12cm);
+	\filldraw[fill=red, draw=black] (5.5,1.5) circle (0.12cm);
+	\filldraw[fill=red, draw=black] (7.5,1.5) circle (0.12cm);
+	%topButtons
+	\filldraw[fill=black, draw=black] (0.5,2.5) circle (0.12cm);
+	\filldraw[fill=black, draw=black] (2.5,2.5) circle (0.12cm);
+	\filldraw[fill=black, draw=black] (4.5,2.5) circle (0.12cm);
+	\filldraw[fill=black, draw=black] (6.5,2.5) circle (0.12cm);
+	%bottomButtons
+	\filldraw[fill=black, draw=black] (1.5,0.5) circle (0.12cm);
+	\filldraw[fill=black, draw=black] (3.5,0.5) circle (0.12cm);
+	\filldraw[fill=black, draw=black] (5.5,0.5) circle (0.12cm);
+	\filldraw[fill=black, draw=black] (7.5,0.5) circle (0.12cm);
+	%topVibes
+	\filldraw[fill=white, draw=black] (1.5,2.5) circle (0.12cm);
+	\filldraw[fill=white, draw=black] (3.5,2.5) circle (0.12cm);
+	\filldraw[fill=white, draw=black] (5.5,2.5) circle (0.12cm);
+	\filldraw[fill=white, draw=black] (7.5,2.5) circle (0.12cm);
+	%bottomVibes
+	\filldraw[fill=white, draw=black] (0.5,0.5) circle (0.12cm);
+	\filldraw[fill=white, draw=black] (2.5,0.5) circle (0.12cm);
+	\filldraw[fill=white, draw=black] (4.5,0.5) circle (0.12cm);
+	\filldraw[fill=white, draw=black] (6.5,0.5) circle (0.12cm);
+	
+	%\filldraw[fill=black, draw=black] (1.2,2.4) rectangle (0.4,2.6cm);
+
+	\end{tikzpicture}
+  	\caption{2D array of LED lights, buttons (black-filled circles) and vibrating motors (white-filled circles).}
+  	\label{fig:1D}
+    	\end{center}
+\end{figure}
+
+The basic components used on our devices are buttons, LED lights and vibrating motors. These elements can be arranged in a variety of 1D, 2D, or 3D arrays. At its simplest, the user interaction involves pressing a button. 
+
+The patterns involve some kind of order that is apparent either visually or by touch. The patterns generated may involve movement and may have directionality. These patterns may be useful in the conveyance of some information, such as the state of a game, a device or the gamer. The pattern may also be a signalling device within a game device to inform the gamer about some situation within her gaming or external environment.
 
 Wearable devices are often hooked up wirelessly to other machines or devices. For instance, gaming controllers provide users with the opportunity to expertly control a game experience. However, game controllers are purpose-driven devices that provide little utility when not connected to the game experience. While there have been many interesting uses of game controllers outside of game experiences, the controllers themselves rely on being attached to hardware in order to have any function. 
 
