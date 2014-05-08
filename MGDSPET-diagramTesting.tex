@@ -1,0 +1,107 @@
+\documentclass{chi-ext}
+
+\usepackage{tikz}
+\usepackage{verbatim}
+%\usepackage[active,tightpage]{preview}
+%\PreviewEnvironment{tikzpicture}
+
+\usepackage{graphicx}   % for EPS use the graphics package instead
+\usepackage{balance}    % useful for balancing the last columns
+\usepackage{bibspacing} % save vertical space in references
+\usepackage{paralist}
+
+\begin{document}
+
+%-----------------------------------------------------
+%TEMPLATE: keep at top
+\begin{figure}
+  \begin{center}
+\begin{tikzpicture}
+
+%ADD stuff HERE
+
+\end{tikzpicture}
+  \caption{Sample diagram.}
+  \label{fig:sample}
+    \end{center}
+\end{figure}
+
+%-----------------------------------------------------
+%SQUARE WAVE 
+\begin{figure}
+  \begin{center}
+\begin{tikzpicture}
+
+\draw[step=1cm,gray,very thin] (0,0) grid (8,2);
+%\draw[thick] (-1,0) -- (0,0);
+%\draw[thick] (0,0) -- (1,0);
+%\draw[thick] (1,0) -- (1,2);
+%\draw[thick] (1,2) -- (2,2);
+%\draw[thick] (2,2) -- (2,0);
+%\draw[thick] (2,0) -- (4,0);
+%\draw[thick] (4,0) -- (4,2);
+%\draw[thick] (4,2) -- (5,2);
+%\draw[thick] (5,2) -- (5,0);
+%\draw[thick] (5,0) -- (7,0);
+%\draw[thick] (7,0) -- (7,2);
+%\draw[thick] (7,2) -- (8,2);
+%\draw[thick] (8,2) -- (8,0);
+\filldraw[fill=orange, draw=black] (1,0) rectangle (2,2);
+\filldraw[fill=orange, draw=black] (3,0) rectangle (4,2);
+\filldraw[fill=orange, draw=black] (5,0) rectangle (6,2);
+\filldraw[fill=orange, draw=black] (7,0) rectangle (8,2);
+
+
+\end{tikzpicture}
+  \caption{Sample diagram.}
+  \label{fig:sample}
+    \end{center}
+\end{figure}
+%-----------------------------------------------------
+%CYCLE w/ NODES
+\begin{figure}
+  \begin{center}
+\begin{tikzpicture}
+
+\def \n {5}
+\def \radius {3cm}
+\def \margin {8} % margin in angles, depends on the radius
+
+\foreach \s in {1,...,\n}
+{
+  \node[draw, circle] at ({360/\n * (\s - 1)}:\radius) {$\s$};
+  \draw[->, >=latex] ({360/\n * (\s - 1)+\margin}:\radius) 
+    arc ({360/\n * (\s - 1)+\margin}:{360/\n * (\s)-\margin}:\radius);
+}
+\end{tikzpicture}
+  \caption{A simple diagram of a cycle.}
+  \label{fig:cycle}
+    \end{center}
+\end{figure}
+
+%-----------------------------------------------------
+%3x8 GRID
+\begin{figure}
+  \begin{center}
+\begin{tikzpicture}
+
+\draw[step=1cm,gray,very thin] (0,0) grid (8,3);
+\draw (0.7,0.5) -> (4,0.5);
+\draw (0.5,0.5) circle (0.2cm); \draw (0.5,1.5) circle (0.2cm); \draw (0.5,2.5) circle (0.2cm); 
+\draw (1.5,0.5) circle (0.2cm); \draw (1.5,1.5) circle (0.2cm); \draw (1.5,2.5) circle (0.2cm); 
+\draw (2.5,0.5) circle (0.2cm); \draw (2.5,1.5) circle (0.2cm); \draw (2.5,2.5) circle (0.2cm); 
+\draw (3.5,0.5) circle (0.2cm); \draw (3.5,1.5) circle (0.2cm); \draw (3.5,2.5) circle (0.2cm); 
+\draw (4.5,0.5) circle (0.2cm); \draw (4.5,1.5) circle (0.2cm); \draw (4.5,2.5) circle (0.2cm); 
+\draw (5.5,0.5) circle (0.2cm); \draw (5.5,1.5) circle (0.2cm); \draw (5.5,2.5) circle (0.2cm); 
+\draw (6.5,0.5) circle (0.2cm); \draw (6.5,1.5) circle (0.2cm); \draw (6.5,2.5) circle (0.2cm); 
+\draw (7.5,0.5) circle (0.2cm); \draw (7.5,1.5) circle (0.2cm); \draw (7.5,2.5) circle (0.2cm); 
+
+\end{tikzpicture}
+  \caption{A grid of buttons, LED lights and vibrating motors.}
+  \label{fig:sample}
+    \end{center}
+\end{figure}
+
+%-----------------------------------------------------
+
+\end{document}
