@@ -9,6 +9,9 @@
 \usepackage{balance}    % useful for balancing the last columns
 \usepackage{bibspacing} % save vertical space in references
 \usepackage{paralist}
+\usepackage{pgf}
+\usetikzlibrary{arrows,automata}
+\usepackage[latin1]{inputenc}
 
 \begin{document}
 
@@ -103,5 +106,33 @@
 \end{figure}
 
 %-----------------------------------------------------
+% simple automata
+\begin{figure}
+  \begin{center}
+\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=1.5cm, minimum size=6pt, semithick]
+	\tikzstyle{every state}=[fill=white,draw=black,text=black]
+	\node[state] (1) {$L_1$};
+	\node[state] (2) [right of=1] {$L_2$};
+	\node[state] (3) [right of=2] {$L_3$};
+	\node[state] (4) [right of=3] {$L_4$};
+	\node[state] (5) [right of=4] {$L_5$};
+	\node[state] (6) [right of=5] {$L_6$};
+	%\node[state] (7) [right of=6] {$L_7$};
+	%\node[state] (8) [right of=7] {$L_8$};
+	
+	\path (1) edge [bend left] node {next} (3);
+	\path (3) edge [bend left] node {next} (5);
+	\path (5) edge [bend left] node {next} (6);
+	
+	\path (6) edge [bend left] node {next} (4);
+	\path (4) edge [bend left] node {next} (2);
+
+\end{tikzpicture}
+  \caption{Simple activation pattern for a 1D array of LED lights.}
+  \label{fig:sample}
+    \end{center}
+\end{figure}
+
+
 
 \end{document}
