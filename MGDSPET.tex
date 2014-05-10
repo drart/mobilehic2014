@@ -48,7 +48,7 @@
 }
 
 % Paper metadata (use plain text, for PDF inclusion and later re-using, if desired)
-\def\plaintitle{Simple Visual and Vibrotactile Patterning within Transmedia Gaming Experiences}
+\def\plaintitle{Simple Visual and Vibrotactile Patterning for Wearable Gaming Experiences for Children}
 \def\plainauthor{Adam Tindale}
 \def\plainkeywords{pattern recognition, wearable devices, gaming, multi-sensory, vibrotactile}
 \def\plaingeneralterms{Gaming, Patterns, Wearable}
@@ -76,7 +76,7 @@
 \maketitle
 
 \begin{abstract}
-Simple, wearable devices are a promising way of encouraging participation with those who consume, and contribute to, media. In this paper we explore techniques for adding simple visual and vibro-tactile patterning for children aged 8-12, which add sensory interest to gameplay as well as convey useful information about basic game dynamics and expected user interactions. In this paper we describe a series of demo experiences focusing on the communication of information through low resolution vibrotactile and LED displays.
+The recent launch of products such as Google Glass and the Pebble smart watch indicate a growing public interest in wearable personal electronics. However, outside of activity monitors and GPS trackers aimed at parents, few products are aimed towards younger users. In this paper, we explore techniques for designing wearable game devices for children aged 8-12. We describe a series of demo experiences which use simple visual and vibrotactile patterning to which add sensory interest to gameplay as well as convey useful information about game dynamics.
 \end{abstract}
 
 \keywords{\plainkeywords}
@@ -89,21 +89,28 @@ Simple, wearable devices are a promising way of encouraging participation with t
 \section{Introduction}
 % ===========================================================================
 
-Gaming controllers provide users with the opportunity to expertly control a game experience. However, game controllers are purpose driven devices that provide little utility when not conneted to the game experience. While there have been many interesting uses of game controllers outside of game experiences, the controllers themselves rely on being attached to hardware in order to have any function. Instead, we take a different approach: we try to make the interactions very simple, such that they convey information in a way that presents few cognitive demands on the user and which the user would tend to find enjoyable and engaging even if they were not participating in a mobile game. 
+%Framing the article around game controllers might be problematic since we do not return to this concept, nor do we address portable game devices or smart phones. Some phrasing, such as "and which the user would tend to find enjoyable and engaging even if they were not participating in a mobile game" suggests that the wearable can also be a controller, which it can't.
 
-Our demo experiences focus on an attempt to make the interactions very simple, such that they convey information in a way that presents few cognitive demands on the user and which the user would tend to find enjoyable and engaging, even if they were not participating in a mobile game. 
+Many children are exposed to digitally enhanced play experiences from an early age. Light and sound effects are no longer uncommon features in baby mobiles, while slightly older children may be exposed to virtual pets. The most recognizable forms of digital play for many children may be screen-based digital games. Though screen-based, many game devices offer players a tangible game experience through an attached (or, in the case of portable gaming devices, incorporated) controller interface.
 
-If well done they engage viewers and can build interesting, emergent social cohorts. They have the potential of explaining and making connections between complex concepts in a fluid and graceful way. However, because of this fluidity of structure they demand a high level of skill in their artistic conception and organization. 
+Gaming controllers provide users with the opportunity to expertly control a game experience. However, game controllers are purpose driven devices that provide little utility when not connected to the game experience. Even the smallest game device needs to be constantly on-hand to be of use to the player, which is often highly impractical. This issue of convenience and portability could be solved by taking a wearable approach to the design of video game devices. 
+%While there have been many interesting uses of game controllers outside of game experiences, the controllers themselves rely on being attached to hardware in order to have any function.
 
-The basic device use cases that might inform the gamer during gameplay, which also could apply to a viewer navigating through a narrative, are: 
+Before beginning development of our prototypes, we considered the challenges that might have caused the lack of wearable devices for children despite the pervasiveness of technology in children's games. These include: \begin{inparaenum}[\itshape a\upshape)]
+  \item maintaining a low price-point
+  \item overcoming the lack of a smart phone processor to process information,
+  \item and, maintaining the balance between distinctiveness (or "coolness") and subtlety.
+\end{inparaenum} Rather than mimic the sophistication of adult wearable devices, we take a different approach: we try to make the interactions very simple, such that they convey information in a way that presents few cognitive demands on the player while delivering an engaging play experience.
+
+Our demo experiences focus on an attempt to make interactions very simple, and suitable for both structured and emergent forms of play. Interactions should be able to inform the user: 
 \begin{inparaenum}[\itshape a\upshape)]
   \item what is my current position or state within the game?
-  \item do I need to make any decisions or choices in order to proceed with the game?
-  \item is anything else happening in the game of which I should be aware? and,
+  \item do I need to make any decisions or choices in order to proceed with the game? and,
   \item what comes next in the game? 
-\end{inparaenum}
+\end{inparaenum} Regardless of how complex the game mechanics are, the operating the device should remain relatively straight forward. We used inexpensive hardware and open source software to help ensure our devices could be easily reproduced at a low price. 
+%If well done they engage viewers and can build interesting, emergent social cohorts. They have the potential of explaining and making connections between complex concepts in a fluid and graceful way. However, because of this fluidity of structure they demand a high level of skill in their artistic conception and organization. 
 
-Our goal is to create integrated user experiences that are simple and enjoyable. Our goal is despite how complex the game mechanics might be the device and how to use it remain relatively simple and straightforward.  Our demo experiences focus on an attempt to make the interactions very simple, such that they convey information in a way that presents few cognitive demands on the user and which the user would tend to find enjoyable and engaging, even if they were not participating in a mobile game. 
+%Our goal is to create integrated user experiences that are simple and enjoyable. Our goal is despite how complex the game mechanics might be the device and how to use it remain relatively simple and straightforward.  Our demo experiences focus on an attempt to make the interactions very simple, such that they convey information in a way that presents few cognitive demands on the user and which the user would tend to find enjoyable and engaging, even if they were not participating in a mobile game. 
 
 % ======================================================================
 \section{Related Work}
