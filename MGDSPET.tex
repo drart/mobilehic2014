@@ -76,7 +76,8 @@
 \maketitle
 
 \begin{abstract}
-The recent launch of products such as Google Glass and the Pebble smart watch indicate a growing public interest in wearable personal electronics. However, outside of activity monitors and GPS trackers aimed at parents, few products are aimed towards younger users. In this paper, we explore techniques for designing wearable game devices for children aged 8-12. We describe a series of demo experiences which use simple visual and vibrotactile patterning to which add sensory interest to gameplay as well as convey useful information about game dynamics.
+%Framing the article around game controllers might be problematic since we do not return to this concept, nor do we address portable game devices or smart phones. Some phrasing, such as "and which the user would tend to find enjoyable and engaging even if they were not participating in a mobile game" suggests that the wearable can also be a controller, which it can't. Reframed regarding wearable tech for children w/ simple interaction as response to price demands and lack of smartphone integration.
+The recent launch of products such as Google Glass and the Pebble Smartwatch indicate a growing public interest in wearable personal electronics. However, outside of physical activity monitors and GPS trackers aimed at parents, few products are aimed towards younger users. In this paper, we explore techniques for designing wearable game devices for children aged 8-12. We describe a series of demo experiences which use simple visual and vibrotactile patterning to which add sensory interest to gameplay as well as convey useful information about game dynamics.
 \end{abstract}
 
 \keywords{\plainkeywords}
@@ -89,25 +90,25 @@ The recent launch of products such as Google Glass and the Pebble smart watch in
 \section{Introduction}
 % ===========================================================================
 
-%Framing the article around game controllers might be problematic since we do not return to this concept, nor do we address portable game devices or smart phones. Some phrasing, such as "and which the user would tend to find enjoyable and engaging even if they were not participating in a mobile game" suggests that the wearable can also be a controller, which it can't.
-
 Many children are exposed to digitally enhanced play experiences from an early age. Light and sound effects are no longer uncommon features in baby mobiles, while slightly older children may be exposed to virtual pets. The most recognizable forms of digital play for many children may be screen-based digital games. Though screen-based, many game devices offer players a tangible game experience through an attached (or, in the case of portable gaming devices, incorporated) controller interface.
 
-Gaming controllers provide users with the opportunity to expertly control a game experience. However, game controllers are purpose driven devices that provide little utility when not connected to the game experience. Even the smallest game device needs to be constantly on-hand to be of use to the player, which is often highly impractical. This issue of convenience and portability could be solved by taking a wearable approach to the design of video game devices. 
+Game controllers provide users with the opportunity to expertly control a game experience. However, even the smallest game device needs to be constantly on-hand to be of use to the player, which is often highly impractical. This issue of convenience and portability could be solved by taking a wearable approach to the design of video game devices. 
 %While there have been many interesting uses of game controllers outside of game experiences, the controllers themselves rely on being attached to hardware in order to have any function.
 
 Before beginning development of our prototypes, we considered the challenges that might have caused the lack of wearable devices for children despite the pervasiveness of technology in children's games. These include: \begin{inparaenum}[\itshape a\upshape)]
   \item maintaining a low price-point
   \item overcoming the lack of a smart phone processor to process information,
-  \item and, maintaining the balance between distinctiveness (or "coolness") and subtlety.
+  \item and, maintaining the balance between visual distinctiveness (or "coolness") and subtlety.
 \end{inparaenum} Rather than mimic the sophistication of adult wearable devices, we take a different approach: we try to make the interactions very simple, such that they convey information in a way that presents few cognitive demands on the player while delivering an engaging play experience.
 
-Our demo experiences focus on an attempt to make interactions very simple, and suitable for both structured and emergent forms of play. Interactions should be able to inform the user: 
+Our demo experiences focus on an attempt to make interactions very simple, and suitable for both structured and emergent forms of play. Our goal was to use investigate how different forms of minimal feedback can be used to inform player interactions in a game situation. Interactions should be able to inform the user: 
 \begin{inparaenum}[\itshape a\upshape)]
+ \item is the device currently in play, on and resting, or off?
+  \item does the feedback indicate that my action was desirable or undesirable?
   \item what is my current position or state within the game?
   \item do I need to make any decisions or choices in order to proceed with the game? and,
   \item what comes next in the game? 
-\end{inparaenum} Regardless of how complex the game mechanics are, the operating the device should remain relatively straight forward. We used inexpensive hardware and open source software to help ensure our devices could be easily reproduced at a low price. 
+\end{inparaenum} Regardless of how complex the game mechanics are, the operating the device should remain relatively straight forward. 
 %If well done they engage viewers and can build interesting, emergent social cohorts. They have the potential of explaining and making connections between complex concepts in a fluid and graceful way. However, because of this fluidity of structure they demand a high level of skill in their artistic conception and organization. 
 
 %Our goal is to create integrated user experiences that are simple and enjoyable. Our goal is despite how complex the game mechanics might be the device and how to use it remain relatively simple and straightforward.  Our demo experiences focus on an attempt to make the interactions very simple, such that they convey information in a way that presents few cognitive demands on the user and which the user would tend to find enjoyable and engaging, even if they were not participating in a mobile game. 
@@ -126,22 +127,27 @@ Oliveira and Maciel propose a network of haptic actuators that use a set of patt
 
 De Jesus Oliveira and Maciel \cite{Jesus-Oliveira:2013aa} present research towards building a hand-mounted array of haptic actuators intended to help the wearer perform a variety of tasks including orientation. They propose that the actuators could be connected to environment-aware sensors so that the actuators would vibrate in a set pattern to alert the wearer of an obstacle (or help instruct them to perform a certain task). Such haptic systems could help visually impaired users navigate. They would also enable fully sighted users to perform certain tasks without being distracted by personal technologies (i.e. using a smartphone to check a map).
 
+\cite{fogg1998handjive}HandJive is a handheld device used for communication and play between people. Researchers found that participants were able to successfully replicate purely haptic patterns at increasing levels of difficulty in a gameplay situation, and enjoyed improvising their own patterns. These findings suggest that haptic feedback can be incorporated as an enjoyable and meaningful way of conveying game information.
+
+\cite{williams2006exploring}Williams, Amanda and Scott present Damage, a smart bracelet for interactions between groups of users. Damage emerged as the result of participants' responses to another project, the social media application Slam. With Slam, participants liked the app and the feeling of being always connected to their social circle, but found the frequent vibrational alerts from their phones as a result of a message being sent or received frustrating. Though at the time of writing still a work-in-progress, Damage would allow users to send coded messages in the form of flashing LEDs embedded in the bracelet to the group by opening and closing snap closures. Though the sender can choose whether to send a red, blue or green LED, ultimately it is up for the users to decide/interpret what each message means. This allows for potentially rich information to be transmitted by the simple device, in a manner that is convenient and unobtrusive to monitor.
 
 % ======================================================================
 \section{Prototypes and Case Studies}
 % ======================================================================
 \subsection{Patterns}
-The prototypes consist of simple arrays of vibrating motors and LED lights. Later prototypes add buttons to these components. What patterns can be created when using these components? The simplest are non-directional ones, such as flashing patterns [all on, then all off]. Other simulate movement using 1D and 2D transformations.
+The prototypes consist of simple arrays of vibrating motors and LED lights. We used inexpensive hardware and open source software to help ensure our devices could be easily reproduced at a low price. Later prototypes add buttons to these components. What patterns can be created when using these components and what might they indicate in a play situation? 
 
 ADD diagram here?
 
+The types of feedback (vibration and light) available can be modified in terms of binary state (on/off), intensity, and simulated direction. With this in mind, we came up with the following interactions: 
 \begin{inparaenum}[\itshape a\upshape)]
-\item flashing, non-directional ones in which all the lights or all the vibe motors activate at the same time. These might be useful, for instance, when the gamer has achieved a new level in a game;
-\item flashing, directional ones which there is a sequential activation such that they appear to point in a specific direction. These could be used when the gamer detects another player in the vicinity and the device shows the direction where the other player is located;
+\item all the lights or all the vibe motors activate at the same time. This might be useful, for instance, when the gamer has achieved a new level in a game or when the player has first activated the device;
+\item all the lights and/or vibration motors activate sequentially such that they appear to point in a specific direction. This could be used to indicate that the player is meant to perform a specific action or to indicate which button should be pushed next;
 \item flashing, expanding ones where a pattern is generated from a 'point of impact' and expands outwards in 2D, similar to what you might find in the 'Game of Life'
+\item lights and motors increase in intensity to indicate escalating difficulty in a game
 \end{inparaenum}
 
-Prototypes began as the simplest and least refined expression of a wearable or functional haptic device. The first prototype has simple linear arrangement of LED light and mobile phone type vibrating motors. When the connected to an Arduino micro-controller this band emits a rhythmic and visual sequential pattern that could conceivably could be used to notify band wearers of others in their vicinity. Although this band was perhaps the most simplistic band possible, it could in fact be functional in some minimal sense for a gaming experience. 
+Prototypes began as the simplest and least refined expression of a wearable or functional haptic device. The first prototype has simple linear arrangement of LED light and mobile phone type vibrating motors. When the connected to an Arduino micro-controller this band emits a rhythmic and visual sequential pattern that could conceivably could be used to notify band wearers of others in their vicinity. Although this band was perhaps the most simplistic  possible, it could in fact be functional in some minimal sense for a gaming experience. 
 
 \begin{figure}
   \begin{center}
@@ -163,7 +169,7 @@ Prototypes began as the simplest and least refined expression of a wearable or f
 
 \section{Discussion and Conclusions}
 
-This paper has demonstrated a number of interfaces that provide wrist based vibrotactile displays. Our work has shown that providing a vibrotactile array instead of a simple vibration motor provides user with a many more pathways of recieving and perceiving information.
+This paper has demonstrated a number of wearable interfaces that provide play-based interactions for children. Our work has shown that simple, low-cost interfaces can provide information for use in a variety of play situations.
 
 %\section{Future Work}
 %Wearable devices and associated technologies for developing is developing at a rapid pace.
