@@ -1,5 +1,4 @@
 \documentclass{chi-ext}
-% Please be sure that you have the dependencies (i.e., additional LaTeX packages) to compile this example.
 % See http://personales.upv.es/luileito/chiext/
 
 \usepackage{tikz}
@@ -88,7 +87,9 @@
 
 %Framing the article around game controllers might be problematic since we do not return to this concept, nor do we address portable game devices or smart phones. Some phrasing, such as "and which the user would tend to find enjoyable and engaging even if they were not participating in a mobile game" suggests that the wearable can also be a controller, which it can't. Reframed regarding wearable tech for children w/ simple interaction as response to price demands and lack of smartphone integration.
 %The recent launch of products such as Google Glass and the Pebble Smartwatch indicate a growing public interest in wearable personal electronics. However, outside of physical activity monitors and GPS trackers aimed at parents, few products are aimed towards younger users. In this paper, we explore techniques for designing wearable game devices for children aged 8-12. We describe a series of demo experiences which use simple visual and vibrotactile patterning to which add sensory interest to gameplay as well as convey useful information about game dynamics.
-In this paper we describe a series of demo wearable experiences using low resolution vibrotactile and LED displays. The purpose for this exploration is to add simple, interactive visual and vibro-tactile patterning with button arrays to wearable gaming devices intended for young children. We built several prototypes with simple components. We examined how arrays of various configurations affect gameplay and how they can be used to convey information about device dynamics and expected user interactions. 
+
+In this paper we describe the design process of expanding vibrotactile displays from single channels devices to multichannel vibrotactile displays. The purpose for this exploration is to add simple, interactive visual and vibro-tactile patterning with button arrays to wearable gaming devices intended for young children. We examined how arrays of various configurations affect gameplay and how they can be used to convey information about device dynamics and expected user interactions. 
+
 \end{abstract}
 
 \keywords{\plainkeywords}
@@ -101,99 +102,105 @@ In this paper we describe a series of demo wearable experiences using low resolu
 \section{Introduction}
 % ===========================================================================
 
-The research questions we address in this paper concern whether it is possible to create wearable gaming experiences that involve simple visual and vibrotactile patterns. Some  research questions of interest to us are:
-\begin{inparaenum}[\itshape a\upshape)]
-\item what array patterns for wearable devices are appropriate?
-\item what functions can such patterns perform?
-\item how can haptic actuators interact with buttons and lights?
-\item is the best way to employ these patterns for the conveyance of information or, for gaming interaction, or for some other purpose?
-\end{inparaenum}
 
-We first built a wearable device using felt, buttons, LED lights and a vibrating motors. On this device we added an interactive `Simon Says` game. Next, we built several prototypes that used similar components but using a thick, industrial rubber belting in which we placed buttons, LED lights and vibrating motors. Such devices can be used as simple gaming platforms and as informational displays. They could used connected to some other device such as a smartphone, or could be standalone. Our approach is to explore the simplest of patterns and study their affordances. 
+Vibrotactile displays allow for a variety of information communication scenarios, most compelling for use are those where the user can receive information without having to look at the signifying device. 
 
-What then is a simple pattern? I could be as simple a one dimensional (1D) line of LED lights. 
+The research questions we address in this paper concern whether it is possible to create wearable gaming experiences that involve visual and vibrotactile spatial and temporal patterns. 
 
-\subsection{Some examples of simple patterns}
-\bigskip
+%Some  research questions of interest to us are:
+%\begin{inparaenum}[\itshape a\upshape)]
+%\item what array patterns for wearable devices are appropriate?
+%\item what functions can such patterns perform?
+%\item how can haptic actuators interact with buttons and lights?
+%\item is the best way to employ these patterns for the conveyance of information or, for gaming interaction, or for some other purpose?
+%\end{inparaenum}
 
-\marginpar{
-\begin{figure}
-  	\begin{center}
-	\begin{tikzpicture}[thick,scale=0.6, every node/.style={scale=0.6}]
+%We first built a wearable device using felt, buttons, LED lights and a vibrating motors. On this device we added an interactive `Simon Says` game. Next, we built several prototypes that used similar components but using a thick, industrial rubber belting in which we placed buttons, LED lights and vibrating motors. Such devices can be used as simple gaming platforms and as informational displays. They could used connected to some other device such as a smartphone, or could be standalone. 
+
+%What then is a simple pattern? I could be as simple a one dimensional (1D) line of LED lights. 
+
+%\subsection{Some examples of simple patterns}
+%\bigskip
+
+%\marginpar{
+%\begin{figure}
+%  	\begin{center}
+%	\begin{tikzpicture}[thick,scale=0.6, every node/.style={scale=0.6}]
 	%green LEDs
-	\draw[step=1cm,gray,very thin] (0,0) grid (8,1);
-	\filldraw[fill=green, draw=black] (0.5,0.5) circle (0.12cm);
-	\filldraw[fill=green, draw=black] (2.5,0.5) circle (0.12cm);
-	\filldraw[fill=green, draw=black] (4.5,0.5) circle (0.12cm);
-	\filldraw[fill=green, draw=black] (6.5,0.5) circle (0.12cm);
+%	\draw[step=1cm,gray,very thin] (0,0) grid (8,1);
+%	\filldraw[fill=green, draw=black] (0.5,0.5) circle (0.12cm);
+%	\filldraw[fill=green, draw=black] (2.5,0.5) circle (0.12cm);
+%	\filldraw[fill=green, draw=black] (4.5,0.5) circle (0.12cm);
+%	\filldraw[fill=green, draw=black] (6.5,0.5) circle (0.12cm);
 	%red LEDs
-	\filldraw[fill=red, draw=black] (1.5,0.5) circle (0.12cm);
-	\filldraw[fill=red, draw=black] (3.5,0.5) circle (0.12cm);
-	\filldraw[fill=red, draw=black] (5.5,0.5) circle (0.12cm);
-	\filldraw[fill=red, draw=black] (7.5,0.5) circle (0.12cm);
+%	\filldraw[fill=red, draw=black] (1.5,0.5) circle (0.12cm);
+%	\filldraw[fill=red, draw=black] (3.5,0.5) circle (0.12cm);
+%	\filldraw[fill=red, draw=black] (5.5,0.5) circle (0.12cm);
+%	\filldraw[fill=red, draw=black] (7.5,0.5) circle (0.12cm);
 
-	\end{tikzpicture}
-  	\caption{1D grid of green and red LED lights.}
-  	\label{fig:1D}
-    	\end{center}
-\end{figure}
-}
+%	\end{tikzpicture}
+%  	\caption{1D grid of green and red LED lights.}
+%  	\label{fig:1D}
+%    	\end{center}
+%\end{figure}
+%}
 
-A next step in complexity are simple 2D grids of LED lights, buttons and vibro-tactile actuators. A device with such inputs and outputs affords many types of interactions and notification possibilities:
-\bigskip
+%A next step in complexity are simple 2D grids of LED lights, buttons and vibro-tactile actuators. A device with such inputs and outputs affords many types of interactions and notification possibilities:
+%\bigskip
 
-\marginpar{
-\begin{figure}
-  	\begin{center}
-	\begin{tikzpicture}[thick,scale=0.6, every node/.style={scale=0.6}]
+%\marginpar{
+%\begin{figure}
+%  	\begin{center}
+%	\begin{tikzpicture}[thick,scale=0.6, every node/.style={scale=0.6}]
 	%green LEDs
-	\draw[step=1cm,gray,very thin] (0,0) grid (8,3);
-	\filldraw[fill=green, draw=black] (0.5,1.5) circle (0.12cm);
-	\filldraw[fill=green, draw=black] (2.5,1.5) circle (0.12cm);
-	\filldraw[fill=green, draw=black] (4.5,1.5) circle (0.12cm);
-	\filldraw[fill=green, draw=black] (6.5,1.5) circle (0.12cm);
+%	\draw[step=1cm,gray,very thin] (0,0) grid (8,3);
+%	\filldraw[fill=green, draw=black] (0.5,1.5) circle (0.12cm);
+%	\filldraw[fill=green, draw=black] (2.5,1.5) circle (0.12cm);
+%	\filldraw[fill=green, draw=black] (4.5,1.5) circle (0.12cm);
+%	\filldraw[fill=green, draw=black] (6.5,1.5) circle (0.12cm);
 	%red LEDs
-	\filldraw[fill=red, draw=black] (1.5,1.5) circle (0.12cm);
-	\filldraw[fill=red, draw=black] (3.5,1.5) circle (0.12cm);
-	\filldraw[fill=red, draw=black] (5.5,1.5) circle (0.12cm);
-	\filldraw[fill=red, draw=black] (7.5,1.5) circle (0.12cm);
+%	\filldraw[fill=red, draw=black] (1.5,1.5) circle (0.12cm);
+%	\filldraw[fill=red, draw=black] (3.5,1.5) circle (0.12cm);
+%	\filldraw[fill=red, draw=black] (5.5,1.5) circle (0.12cm);
+%	\filldraw[fill=red, draw=black] (7.5,1.5) circle (0.12cm);
 	%topButtons
-	\filldraw[fill=black, draw=black] (0.5,2.5) circle (0.12cm);
-	\filldraw[fill=black, draw=black] (2.5,2.5) circle (0.12cm);
-	\filldraw[fill=black, draw=black] (4.5,2.5) circle (0.12cm);
-	\filldraw[fill=black, draw=black] (6.5,2.5) circle (0.12cm);
+%	\filldraw[fill=black, draw=black] (0.5,2.5) circle (0.12cm);
+%	\filldraw[fill=black, draw=black] (2.5,2.5) circle (0.12cm);
+%	\filldraw[fill=black, draw=black] (4.5,2.5) circle (0.12cm);
+%	\filldraw[fill=black, draw=black] (6.5,2.5) circle (0.12cm);
 	%bottomButtons
-	\filldraw[fill=black, draw=black] (1.5,0.5) circle (0.12cm);
-	\filldraw[fill=black, draw=black] (3.5,0.5) circle (0.12cm);
-	\filldraw[fill=black, draw=black] (5.5,0.5) circle (0.12cm);
-	\filldraw[fill=black, draw=black] (7.5,0.5) circle (0.12cm);
+%	\filldraw[fill=black, draw=black] (1.5,0.5) circle (0.12cm);
+%	\filldraw[fill=black, draw=black] (3.5,0.5) circle (0.12cm);
+%	\filldraw[fill=black, draw=black] (5.5,0.5) circle (0.12cm);
+%	\filldraw[fill=black, draw=black] (7.5,0.5) circle (0.12cm);
 	%topVibes
-	\filldraw[fill=white, draw=black] (1.5,2.5) circle (0.12cm);
-	\filldraw[fill=white, draw=black] (3.5,2.5) circle (0.12cm);
-	\filldraw[fill=white, draw=black] (5.5,2.5) circle (0.12cm);
-	\filldraw[fill=white, draw=black] (7.5,2.5) circle (0.12cm);
+%	\filldraw[fill=white, draw=black] (1.5,2.5) circle (0.12cm);
+%	\filldraw[fill=white, draw=black] (3.5,2.5) circle (0.12cm);
+%	\filldraw[fill=white, draw=black] (5.5,2.5) circle (0.12cm);
+%	\filldraw[fill=white, draw=black] (7.5,2.5) circle (0.12cm);
 	%bottomVibes
-	\filldraw[fill=white, draw=black] (0.5,0.5) circle (0.12cm);
-	\filldraw[fill=white, draw=black] (2.5,0.5) circle (0.12cm);
-	\filldraw[fill=white, draw=black] (4.5,0.5) circle (0.12cm);
-	\filldraw[fill=white, draw=black] (6.5,0.5) circle (0.12cm);
+%	\filldraw[fill=white, draw=black] (0.5,0.5) circle (0.12cm);
+%	\filldraw[fill=white, draw=black] (2.5,0.5) circle (0.12cm);
+%	\filldraw[fill=white, draw=black] (4.5,0.5) circle (0.12cm);
+%	\filldraw[fill=white, draw=black] (6.5,0.5) circle (0.12cm);
 	
 	%\filldraw[fill=black, draw=black] (1.2,2.4) rectangle (0.4,2.6cm);
 
-	\end{tikzpicture}
-  	\caption{2D array of LED lights, buttons (black-filled circles) and vibrating motors (white-filled circles).}
-  	\label{fig:1D}
-    	\end{center}
-\end{figure}
-}
+%	\end{tikzpicture}
+%  	\caption{2D array of LED lights, buttons (black-filled circles) and vibrating motors (white-filled circles).}
+%  	\label{fig:1D}
+%    	\end{center}
+%\end{figure}
+%}
 
-The basic components used on the devices we discuss here are buttons, LED lights and vibrating motors. These elements can be arranged in a variety of 1D, 2D, or 3D arrays. 
+%The basic components used on the devices we discuss here are buttons, LED lights and vibrating motors. These elements can be arranged in a variety of 1D, 2D, or 3D arrays. 
 
-At its simplest, user interactions involves pressing a button. Buttons can be used to select a pattern, to play a game involving flashing lights such as 'Simon Says' or to acknowledge a signal provided by the lights and vibrating motors.  
+%At its simplest, user interactions involves pressing a button. Buttons can be used to select a pattern, to play a game involving flashing lights such as 'Simon Says' or to acknowledge a signal provided by the lights and vibrating motors.  
 
+Our approach is to explore the simplest of patterns and study their affordances. 
 The patterns involve some kind of order that is apparent either visually or tactilely. The patterns generated may involve movement and may have directionality. These patterns may be useful in the conveyance of some information, such as the state of a game, a device or the gamer. The pattern may also be a signalling device within a game device to inform the gamer about some situation within her gaming or external environment.
 
-Wearable devices are often hooked up wirelessly to other machines or devices. For instance, gaming controllers provide users with the opportunity to expertly control a game experience. However, game controllers are purpose-driven devices that provide little utility when not connected to the game experience. While there have been many interesting uses of game controllers outside of game experiences, the controllers themselves rely on being attached to hardware in order to have any function. 
+%Wearable devices are often hooked up wirelessly to other machines or devices. For instance, gaming controllers provide users with the opportunity to expertly control a game experience. However, game controllers are purpose-driven devices that provide little utility when not connected to the game experience. While there have been many interesting uses of game controllers outside of game experiences, the controllers themselves rely on being attached to hardware in order to have any function. 
 
 %Therefore, wearable device could have functions independent of other devices. They could be self-sufficient in their functionality. The patterns they present to the user could have some value outside the context of a larger gaming environment. 
 
@@ -265,20 +272,20 @@ Such haptic systems could help visually impaired users navigate. They would also
 % ======================================================================
 
 \subsection{Simon Says Wristband}
-Description: this is a wearable version of the traditional \emph{Simon Says} game mounted into a velcro and felt wristband. Unlike the rubber bands with their aggressive punk aesthetic this wristband is relatively sleek and wearable. It is sewn onto a flexible felt band. Conductive thread connects components, which aids wearability. The game is controlled by four push buttons, each with a corresponding LED light. This forms a 2x2 button and light matrix. The LEDs flash in a random pattern to begin a game session. 
+Description: this is a wearable version of the traditional \emph{Simon Says} game mounted into a velcro and felt wristband.  It is sewn onto a flexible felt band. Conductive thread connects components, which aids wearability. The game is controlled by four push buttons, each with a corresponding LED light. This forms a 2x2 button and light matrix. The LEDs flash in a random pattern to begin a game session. 
 
 A single vibration motor signals the beginning of a new game. To play the game the wearer repeats the pattern as flashed by the LEDs by pressing the buttons directly adjacent to each LED. The button and light array affords simple gaming possibilities. The components are low profile and are integrated into a device that is lightweight and comfortable to wear. 
 
-This wristband's components are:
-\begin{inparaenum}[\itshape a\upshape)]
-\item Felt wristband and Velcro closer
-\item Lilypad Arduino
-\item Push buttons
-\item LEDS (red, blue, yellow, green)
-\item Vibration Motor
-\item Conductive thread
-\item Power supply
-\end{inparaenum}
+%This wristband's components are:
+%\begin{inparaenum}[\itshape a\upshape)]
+%\item Felt wristband and Velcro closer
+%\item Lilypad Arduino
+%\item Push buttons
+%\item LEDS (red, blue, yellow, green)
+%\item Vibration Motor
+%\item Conductive thread
+%\item Power supply
+%\end{inparaenum}
 
 \marginpar{
 \begin{figure}
@@ -315,13 +322,13 @@ This wrist band with a thick rubber band has vibrating motors and LED lights. Vi
 
 The device is very thick and can?t be worn (some components come out the back of the device). It is also hard-wired to an Arduino board, which also prevents wearability. The device has no input buttons or other input devices. The device makes a repetitive rhythmic sound by nature of its simple looping activation pattern. Other activation patterns could be programmed using the same components. These rhythms can be enjoyed in their own right as simple proto-musical patterns. Rhythmic, haptic patterns could also convey certain types of information, such as game mode, beginning of new sessions, ends of a session, arrival into a new playing zone, etc. 
 
-This wristband's components include	:
-\begin{inparaenum}[\itshape a\upshape)]
-\item 16mm x 6mm mobile phone vibrators (Panasonic)
-\item LED lights (red/green)
-\item rubber band (conveyor belt material)
-\item Arduino Mega 2560 controller board, w/ wired connectors
-\end{inparaenum}
+%This wristband's components include	:
+%\begin{inparaenum}[\itshape a\upshape)]
+%\item 16mm x 6mm mobile phone vibrators (Panasonic)
+%\item LED lights (red/green)
+%\item rubber band (conveyor belt material)
+%\item Arduino Mega 2560 controller board, w/ wired connectors
+%\end{inparaenum}
 
 \marginpar{
 \begin{figure}
@@ -336,23 +343,23 @@ This wristband's components include	:
 \subsection{Rubber vibration band version 2}
 This band is similar to the first band nut instead of a linear pattern, there is 3x8 array of buttons, lights and vibrating motors. Each row of this array has one button, one light and one vibrator. The buttons are programmed to activate the other two components in their row, to activate patterns across the whole array, (such as all the lights flashing at once, all vibrators at once, all red lights in sequence, all top vibrators in sequence, etc.), and to create interactive buttons games like \emph{Simon Says}.
 
-This version like the first is not possible to wear in its current configuration due to the connection to its controlling Arduino board and thickness of its components. It presents a certain \emph{punk} aesthetic due to the thickness of the rubber band and the aggressiveness of the rotating vibrating motors. For some users, this might be an attractive feature. The 3x8 matrix starts to afford some interesting possibilities for user interaction. Modal play becomes possible since there are so many types of signals possible. For instance, all red lights could flash to indicate entering into a certain game mode. Therefore, some plausible use cases for the wristband could involve a simple wearable game involving button pushing; it could become the target device for authoring of light and vibration patterns, or it could be signalling device (if connected to wireless components) when in proximity to people or objects.
+It is not possible to wear in its current configuration due to the connection to its controlling Arduino board and thickness of its components.  The 3x8 matrix starts to afford some interesting possibilities for user interaction. Modal play becomes possible since there are so many types of signals possible. For instance, all red lights could flash to indicate entering into a certain game mode. Therefore, some plausible use cases for the wristband could involve a simple wearable game involving button pushing; it could become the target device for authoring of light and vibration patterns, or it could be signalling device (if connected to wireless components) when in proximity to people or objects.
 
-This wristband's components include:
-\begin{inparaenum}[\itshape a\upshape)]
-\item 16mm x 6mm mobile phone vibrators (Panasonic)
-\item LED lights (red/green)
-\item rubber band (conveyor belt material)
-\item Arduino Mega 2560 controller board, w/ wired connectors
-\item Push buttons (push on / norm off); Each individual component has its own digital pin on the Arduino board (3x8 = 24 pins in total).
-\end{inparaenum}
+%This wristband's components include:
+%\begin{inparaenum}[\itshape a\upshape)]
+%\item 16mm x 6mm mobile phone vibrators (Panasonic)
+%\item LED lights (red/green)
+%\item rubber band (conveyor belt material)
+%\item Arduino Mega 2560 controller board, w/ wired connectors
+%\item Push buttons (push on / norm off); Each individual component has its own digital pin on the Arduino board (3x8 = 24 pins in total).
+%\end{inparaenum}
 
 \marginpar{
 \begin{figure}
   \begin{center}
   \includegraphics[width=\marginparwidth]{images/P1130396.jpg}
   \caption{A prototype for a wearable that has a 3x8 array of buttons, LED lights and vibrating motors.}
-  \label{fig:marginparsample}
+  \label{fig:38wearable}
   \end{center}  
 \end{figure}
 }
@@ -380,7 +387,7 @@ The prototypes consist of simple arrays of vibrating motors and LED lights. Late
 \subsection{Development of prototypes}
 Prototypes began as the simplest and least refined expression of a wearable or functional haptic device. The first prototype has simple linear arrangement of LED light and mobile phone type vibrating motors. When the connected to an Arduino micro-controller this band emits a rhythmic and visual sequential pattern that could conceivably could be used to notify band wearers of others in their vicinity. 
 
-Although this band was perhaps the most simplistic band possible, it could in fact be functional in some minimal sense for a transmedia gaming experience. Also, such a minimal band would be inexpensive to manufacture and simple to program. 
+%Although this band was perhaps the most simplistic band possible, it could in fact be functional in some minimal sense for a transmedia gaming experience. Also, such a minimal band would be inexpensive to manufacture and simple to program. 
 
 Prototypes began as the simplest and least refined expression of a wearable or functional haptic device. The first prototype has simple linear arrangement of LED light and mobile phone type vibrating motors. When the connected to an Arduino micro-controller this band emits a rhythmic and visual sequential pattern that could conceivably could be used to notify band wearers of others in their vicinity. Although this band was perhaps the most simplistic band possible, it could in fact be functional in some minimal sense for a gaming experience. 
 
@@ -400,8 +407,8 @@ This paper has demonstrated a number of interfaces that provide wrist based vibr
 \subsection{Component Patterns vs. Dynamic Interactive Patterns}
 Two types of patterns involved int the devices prototyped: there are the simple grids of the components themselves, and then there are the patterns which can generated using these simple components. When lights and vibrating motors can actuate in a dynamic way, then the dynamics that can be designed, such as flashes, waves and very low resolution visual images, can produce very interesting effects. 
 
-\subsection{Wearability and Testing}
-These kind of devices at the prototype stage are far from being wearable. They are typically connected to an Arduino board and have bulky components and wired connections that interfere with basic wearability. This makes testing of such devices in a natural context difficult or impossible. A question that arises is how to decide, in an evidence-based manner, which devices to develop further such that they become miniaturized and wearable. 
+%\subsection{Wearability and Testing}
+%These kind of devices at the prototype stage are far from being wearable. They are typically connected to an Arduino board and have bulky components and wired connections that interfere with basic wearability. This makes testing of such devices in a natural context difficult or impossible. A question that arises is how to decide, in an evidence-based manner, which devices to develop further such that they become miniaturized and wearable. 
 
 \section{Future Work}
 Next steps in this research are:
@@ -413,7 +420,7 @@ Next steps in this research are:
 \end{inparaenum}
 
 \section{Conclusion}
-TBD
+Vibrotactile arrays present new possibilities for information display to users through their body. We have demonstrated the use of a wearable multichannel vibrotactile display intended for gaming in order to explore the uses and affordances in a non-critical usage scenario. 
 
 \section{Acknowledgements}
 %We thank the valuable input from Patrick Crowe and all those at Xenophile Media Inc. who have great expertise in crafting transmedia narratives; Dr. Rachel Zuannon from the Graduate Design Program at Anhembi Morumbi University, Sao Paulo, Brazil.; the professors, students and staff within OCAD University's Digital Futures Initiative (DFI) for their valuable input and helpful comments. The following students within the DFI program worked on this project over many months: Hudson Pridham, Ryan Maksymic, Jessica Peter and Boris Kourtoukov. We thank Dr. Steve Szigeti for his contributions to this project and we especially thank Dr. Sara Diamond, President of OCAD University for her guidance and support.
