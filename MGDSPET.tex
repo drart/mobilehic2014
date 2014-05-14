@@ -13,7 +13,7 @@
   ACM 978-1-XXXX-XXXX-X/XX/XX.\\
 }
 
-\title{Simple Visual and Vibrotactile Patterning within Wearable Mobile Gaming Experiences}
+\title{Wearable Haptic Gaming Using Vibrotactile Arrays}
 
 \numberofauthors{5}
 % Notice how author names are alternately typesetted to appear ordered in 2-column format;
@@ -53,10 +53,10 @@
 }
 
 % Paper metadata (use plain text, for PDF inclusion and later re-using, if desired)
-\def\plaintitle{Simple Visual and Vibrotactile Patterning for Wearable Gaming Experiences for Children}
+\def\plaintitle{Wearable Haptic Gaming Using Vibrotactile Arrays}
 \def\plainauthor{Adam Tindale}
-\def\plainkeywords{pattern recognition, wearable devices, gaming, multi-sensory, vibrotactile}
-\def\plaingeneralterms{Gaming, Patterns, Wearable}
+\def\plainkeywords{haptic gaming, vibrotactile arrays, wearable devices, multi-sensory}
+\def\plaingeneralterms{Haptics, Gaming, Wearable}
 
 \hypersetup{
   % Your metadata go here
@@ -78,6 +78,7 @@
 \usetikzlibrary{shapes,arrows}
 
 \begin{document}
+
 \maketitle
 
 \begin{abstract}
@@ -86,7 +87,8 @@
 %In this paper we describe a series of demo experiences focusing on the communication of information through low resolution vibrotactile and LED displays. The intended purpose for this exploration is to add simple visual and vibro-tactile patterning to wearable devices intended for children aged 8-12. These patterns add sensory interest to these devices and convey useful information about device dynamics and expected user interactions. 
 
 %Framing the article around game controllers might be problematic since we do not return to this concept, nor do we address portable game devices or smart phones. Some phrasing, such as "and which the user would tend to find enjoyable and engaging even if they were not participating in a mobile game" suggests that the wearable can also be a controller, which it can't. Reframed regarding wearable tech for children w/ simple interaction as response to price demands and lack of smartphone integration.
-The recent launch of products such as Google Glass and the Pebble Smartwatch indicate a growing public interest in wearable personal electronics. However, outside of physical activity monitors and GPS trackers aimed at parents, few products are aimed towards younger users. In this paper, we explore techniques for designing wearable game devices for children aged 8-12. We describe a series of demo experiences which use simple visual and vibrotactile patterning to which add sensory interest to gameplay as well as convey useful information about game dynamics.
+%The recent launch of products such as Google Glass and the Pebble Smartwatch indicate a growing public interest in wearable personal electronics. However, outside of physical activity monitors and GPS trackers aimed at parents, few products are aimed towards younger users. In this paper, we explore techniques for designing wearable game devices for children aged 8-12. We describe a series of demo experiences which use simple visual and vibrotactile patterning to which add sensory interest to gameplay as well as convey useful information about game dynamics.
+In this paper we describe a series of demo wearable experiences using low resolution vibrotactile and LED displays. The purpose for this exploration is to add simple, interactive visual and vibro-tactile patterning with button arrays to wearable gaming devices intended for young children. We built several prototypes with simple components. We examined how arrays of various configurations affect gameplay and how they can be used to convey information about device dynamics and expected user interactions. 
 \end{abstract}
 
 \keywords{\plainkeywords}
@@ -101,19 +103,23 @@ The recent launch of products such as Google Glass and the Pebble Smartwatch ind
 
 The research questions we address in this paper concern whether it is possible to create wearable gaming experiences that involve simple visual and vibrotactile patterns. Some  research questions of interest to us are:
 \begin{inparaenum}[\itshape a\upshape)]
-\item what types of pattern for wearable devices seem appropriate?
+\item what array patterns for wearable devices are appropriate?
 \item what functions can such patterns perform?
 \item how can haptic actuators interact with buttons and lights?
-\item is the best way to employ these patterns for the conveyance of information or for some other purpose?
+\item is the best way to employ these patterns for the conveyance of information or, for gaming interaction, or for some other purpose?
 \end{inparaenum}
+
+We first built a wearable device using felt, buttons, LED lights and a vibrating motors. On this device we added an interactive `Simon Says` game. Next, we built several prototypes that used similar components but using a thick, industrial rubber belting in which we placed buttons, LED lights and vibrating motors. Such devices can be used as simple gaming platforms and as informational displays. They could used connected to some other device such as a smartphone, or could be standalone. Our approach is to explore the simplest of patterns and study their affordances. 
 
 What then is a simple pattern? I could be as simple a one dimensional (1D) line of LED lights. 
 
 \subsection{Some examples of simple patterns}
 \bigskip
+
+\marginpar{
 \begin{figure}
   	\begin{center}
-	\begin{tikzpicture}
+	\begin{tikzpicture}[thick,scale=0.6, every node/.style={scale=0.6}]
 	%green LEDs
 	\draw[step=1cm,gray,very thin] (0,0) grid (8,1);
 	\filldraw[fill=green, draw=black] (0.5,0.5) circle (0.12cm);
@@ -131,12 +137,15 @@ What then is a simple pattern? I could be as simple a one dimensional (1D) line 
   	\label{fig:1D}
     	\end{center}
 \end{figure}
+}
 
-The next step in complexity are simple 2D grids of LED lights, buttons and vibro-tactile actuators. A device with such inputs and outputs affords many types of interactions and notification possibilities:
+A next step in complexity are simple 2D grids of LED lights, buttons and vibro-tactile actuators. A device with such inputs and outputs affords many types of interactions and notification possibilities:
 \bigskip
+
+\marginpar{
 \begin{figure}
   	\begin{center}
-	\begin{tikzpicture}
+	\begin{tikzpicture}[thick,scale=0.6, every node/.style={scale=0.6}]
 	%green LEDs
 	\draw[step=1cm,gray,very thin] (0,0) grid (8,3);
 	\filldraw[fill=green, draw=black] (0.5,1.5) circle (0.12cm);
@@ -176,28 +185,31 @@ The next step in complexity are simple 2D grids of LED lights, buttons and vibro
   	\label{fig:1D}
     	\end{center}
 \end{figure}
+}
 
-The basic components used on the devices we discuss here are buttons, LED lights and vibrating motors. These elements can be arranged in a variety of 1D, 2D, or 3D arrays. At its simplest, user interactions involves pressing a button. Buttons can be used to select a pattern, to play a game involving flashing lights such as 'Simon Says' or to acknowledge a signal provided by the lights and vibrating motors.  
+The basic components used on the devices we discuss here are buttons, LED lights and vibrating motors. These elements can be arranged in a variety of 1D, 2D, or 3D arrays. 
+
+At its simplest, user interactions involves pressing a button. Buttons can be used to select a pattern, to play a game involving flashing lights such as 'Simon Says' or to acknowledge a signal provided by the lights and vibrating motors.  
 
 The patterns involve some kind of order that is apparent either visually or tactilely. The patterns generated may involve movement and may have directionality. These patterns may be useful in the conveyance of some information, such as the state of a game, a device or the gamer. The pattern may also be a signalling device within a game device to inform the gamer about some situation within her gaming or external environment.
 
 Wearable devices are often hooked up wirelessly to other machines or devices. For instance, gaming controllers provide users with the opportunity to expertly control a game experience. However, game controllers are purpose-driven devices that provide little utility when not connected to the game experience. While there have been many interesting uses of game controllers outside of game experiences, the controllers themselves rely on being attached to hardware in order to have any function. 
 
-Therefore, wearable device could have functions independent of other devices. They could be self-sufficient in their functionality. The patterns they present to the user could have some value outside the context of a larger gaming environment. 
+%Therefore, wearable device could have functions independent of other devices. They could be self-sufficient in their functionality. The patterns they present to the user could have some value outside the context of a larger gaming environment. 
 
 Using simple components such as buttons, lights and vibrating motors a a device will have certain affordances. This paper explores what those affordances are and what their potential application might be. 
 
-\subsection{Some possible functions for simple patterns}
-\begin{inparaenum}[\itshape a\upshape)]
-\item they could create pleasing visual or tactile sensations for the user
-\item they could notify wearers of something of interest in their proximity
-\item they could provide an identity for the wearer with light and vibratory patterns becoming a type of personal signature
-\item and, they could provide a wearable 'authoring environment' for these types of decorative and informational functions. 
-\end{inparaenum}
+%\subsection{Some possible functions for simple patterns}
+%\begin{inparaenum}[\itshape a\upshape)]
+%\item they could create pleasing visual or tactile sensations for the user
+%\item they could notify wearers of something of interest in their proximity
+%\item they could provide an identity for the wearer with light and vibratory patterns becoming a type of personal signature
+%\item and, they could provide a wearable 'authoring environment' for these types of decorative and informational functions. 
+%\end{inparaenum}
 
-Interactions with such a device could be very simple, such that they convey information in a way that presents few cognitive demands on the user and which the user would tend to find enjoyable and engaging even if they were not participating in a mobile game. 
+%Interactions with such a device could be very simple, such that they convey information in a way that presents few cognitive demands on the user and which the user would tend to find enjoyable and engaging even if they were not participating in a mobile game. 
 
-Our demo experiences focus on an attempt to make the interactions very simple, such that they convey information in a way that presents few cognitive demands on the user and which the user would tend to find enjoyable and engaging, even if they were not participating in a mobile game. 
+%Our demo experiences focus on an attempt to make the interactions very simple, such that they convey information in a way that presents few cognitive demands on the user and which the user would tend to find enjoyable and engaging, even if they were not participating in a mobile game. 
 
 %If well done they engage viewers and can build interesting, emergent social cohorts. They have the potential of explaining and making connections between complex concepts in a fluid and graceful way. However, because of this fluidity of structure they demand a high level of skill in their artistic conception and organization. 
 
@@ -217,7 +229,7 @@ Our demo experiences focus on an attempt to make the interactions very simple, s
 %\item give the wearer some indication of the game mode the wearer is in.
 %\end{inparaenum}
 
-Our demo experiences focus on an attempt to make the interactions very simple, such that they convey information in a way that presents few cognitive demands on the user and which the user would tend to find enjoyable and engaging.
+%Our demo experiences focus on an attempt to make the interactions very simple, such that they convey information in a way that presents few cognitive demands on the user and which the user would tend to find enjoyable and engaging.
 
 %Our goal is to create integrated user experiences that are simple and enjoyable. Our goal is despite how complex the game mechanics might be the device and how to use it remain relatively simple and straightforward.  
 
@@ -230,15 +242,19 @@ Our demo experiences focus on an attempt to make the interactions very simple, s
 
 Ruspini provides a useful introduction to the concepts and history of haptics, the basics of haptic psychophysics and haptic devices past and present \cite{ruspini1999haptics}.
 
-Bronner notes that a sense of touch is basic to human processes of testing, expressing reality and meaning. Often people must both see with their own eyes as well as touch with their own hands to believe in a phenomenon\cite{bronner1982haptic}. He also notes that people surround themselves with particular objects to reinforce their own feelings and identities. 
+Bronner notes that a sense of touch is basic to human processes of testing, expressing reality and meaning. Often people must both see with their own eyes as well as touch with their own hands to believe in a phenomenon\cite{bronner1982haptic}. He also notes that people surround themselves with particular, touchable objects to reinforce their own feelings and identities. 
 
 MacLean \cite{maclean2009putting} discusses the potential benefits of haptic feedback as an ambient notification system. Unlike visual information, which can be obtrusive while completing a task, or sound, which can be obnoxious in a public environment, haptic feedback is usually experienced only by the user and does not directly interfere with the task at hand. 
 
-In Profita (2013) \cite{profita2013don} researchers reveal the results of studies completed in the United States and South Korea on the social acceptability of interacting with on-body controllers in which participants  ranked factors such as ?awkwardness? and ?coolness? of the exhibited interactions as actors performed them. This article is helpful for providing insight on social acceptability of wearable positioning as it relates to gender and culture.
+In Profita (2013) \cite{profita2013don} researchers reveal the results of studies completed in the United States and South Korea on the social acceptability of interacting with on-body controllers in which participants  ranked factors such as `awkwardness` and `coolness` of the exhibited interactions as actors performed them. This article is helpful for providing insight on social acceptability of wearable positioning as it relates to gender and culture.
 
 Oliveira and Maciel propose a network of haptic actuators that use a set of patterns to express elements of an environment that has obstacles and free paths and demonstrates the use of a haptic language that helps users navigate and consists of vibrotactile signs to complement or replace their vision. \cite{Jesus-Oliveira:2013aa}
 
-De Jesus Oliveira and Maciel \cite{Jesus-Oliveira:2013aa} present research towards building a hand-mounted array of haptic actuators intended to help the wearer perform a variety of tasks including orientation. They propose that the actuators could be connected to environment-aware sensors so that the actuators would vibrate in a set pattern to alert the wearer of an obstacle (or help instruct them to perform a certain task). Such haptic systems could help visually impaired users navigate. They would also enable fully sighted users to perform certain tasks without being distracted by personal technologies (i.e. using a smartphone to check a map).
+De Jesus Oliveira and Maciel \cite{Jesus-Oliveira:2013aa} present research towards building a hand-mounted array of haptic actuators intended to help the wearer perform a variety of tasks including orientation. 
+
+%They propose that the actuators could be connected to environment-aware sensors so that the actuators would vibrate in a set pattern to alert the wearer of an obstacle (or help instruct them to perform a certain task). 
+
+Such haptic systems could help visually impaired users navigate. They would also enable fully sighted users to perform certain tasks without being distracted by personal technologies (i.e. using a smartphone to check a map).
 
 \cite{fogg1998handjive}HandJive is a handheld device used for communication and play between people. Researchers found that participants were able to successfully replicate purely haptic patterns at increasing levels of difficulty in a gameplay situation, and enjoyed improvising their own patterns. These findings suggest that haptic feedback can be incorporated as an enjoyable and meaningful way of conveying game information.
 
@@ -249,7 +265,9 @@ De Jesus Oliveira and Maciel \cite{Jesus-Oliveira:2013aa} present research towar
 % ======================================================================
 
 \subsection{Simon Says Wristband}
-Description: this is a wearable version of the traditional \emph{Simon Says} game mounted into a velcro and felt wristband. Unlike the rubber bands with their aggressive punk aesthetic this wristband is relatively sleek and wearable. It is sewn onto a flexible felt band. Conductive thread connects components, which aids wearability. The game is controlled by four push buttons, each with a corresponding LED light. This forms a 2x2 button and light matrix. The LEDs flash in a random pattern to begin a game session. A single vibration motor signals the beginning of a new game. To play the game the wearer repeats the pattern as flashed by the LEDs by pressing the buttons directly adjacent to each LED. The button and light array affords simple gaming possibilities. The components are low profile and are integrated into a device that is lightweight and comfortable to wear. 
+Description: this is a wearable version of the traditional \emph{Simon Says} game mounted into a velcro and felt wristband. Unlike the rubber bands with their aggressive punk aesthetic this wristband is relatively sleek and wearable. It is sewn onto a flexible felt band. Conductive thread connects components, which aids wearability. The game is controlled by four push buttons, each with a corresponding LED light. This forms a 2x2 button and light matrix. The LEDs flash in a random pattern to begin a game session. 
+
+A single vibration motor signals the beginning of a new game. To play the game the wearer repeats the pattern as flashed by the LEDs by pressing the buttons directly adjacent to each LED. The button and light array affords simple gaming possibilities. The components are low profile and are integrated into a device that is lightweight and comfortable to wear. 
 
 This wristband's components are:
 \begin{inparaenum}[\itshape a\upshape)]
@@ -262,33 +280,35 @@ This wristband's components are:
 \item Power supply
 \end{inparaenum}
 
+\marginpar{
 \begin{figure}
   \begin{center}
-  \includegraphics[width=\columnwidth]{images/P1130375.jpg}
+  \includegraphics[width=\marginparwidth]{images/P1130375.jpg}
   \caption{A wearable version of the traditional Simon Says game. The LEDs flash in a random pattern. The wearer must repeat the pattern flashed by the LEDs by pressing the buttons directly adjacent to each LED.}
   \label{fig:simonSays}
   \end{center}  
 \end{figure}
+}
 
-\subsection{Screen-based Wrist Wearable}
-This prototype is as yet, not wearable but has a compact OLED screen with a pixel  resolution of 128x128. The intention for this device was to support interactions with a collections and task-based transmedia game called Time Tremors. The screen displays several items of interest for simple task-based games: name of task, efficiency at completing task, time spent on task and visualization of task.
-
-Currently, compact, relatively high resolution screens (for instance, in pixel resolution of 128x128, or 96x96) are compact, inexpensive and provide clear images, which enables high-density information display similar to that found on smartphone and tablet displays, yet in a very compact form factor. This is in contrast to other devices shown here that have very low resolution input and output arrays. High density visual displays requires different types of interactions compared to very low resolution arrays and require operating software quite different from that which low resolution input and output arrays require.
-
-This prototype's components are:
-\begin{inparaenum}[\itshape a\upshape)]
-\item 2200 mAh LiPo battery
-\item 128 x 128 pixel OLED display
-\item 5V step-up for LiPo battery
-\end{inparaenum}
-
-\begin{figure}
-  \begin{center}
-  \includegraphics[width=\columnwidth]{images/P1130382.jpg}
-  \caption{A prototype for a wearable that has a compact, yet high resolution OLED screen.}
-  \label{fig:oledscreen}
-  \end{center}  
-\end{figure}
+%\subsection{Screen-based Wrist Wearable}
+%This prototype is as yet, not wearable but has a compact OLED screen with a pixel  resolution of 128x128. The intention for this device was to support interactions with a collections and task-based transmedia game called Time Tremors. The screen displays several items of interest for simple task-based games: name of task, efficiency at completing task, time spent on task and visualization of task.
+%
+%Currently, compact, relatively high resolution screens (for instance, in pixel resolution of 128x128, or 96x96) are compact, inexpensive and provide clear images, which enables high-density information display similar to that found on smartphone and tablet displays, yet in a very compact form factor. This is in contrast to other devices shown here that have very low resolution input and output arrays. High density visual displays requires different types of interactions compared to very low resolution arrays and require operating software quite different from that which low resolution input and output arrays require.
+%
+%This prototype's components are:
+%\begin{inparaenum}[\itshape a\upshape)]
+%\item 2200 mAh LiPo battery
+%\item 128 x 128 pixel OLED display
+%\item 5V step-up for LiPo battery
+%\end{inparaenum}
+%
+%\begin{figure}
+%  \begin{center}
+%  \includegraphics[width=\columnwidth]{images/P1130382.jpg}
+%  \caption{A prototype for a wearable that has a compact, yet high resolution OLED screen.}
+%  \label{fig:oledscreen}
+%  \end{center}  
+%\end{figure}
 
 \subsection{Rubber vibration band version 1}
 This wrist band with a thick rubber band has vibrating motors and LED lights. Vibrating motors and lights are arranged linearly with motors alternating with lights. It is connected to and controlled by an Arduino Mega board. The activation pattern of the lights and vibrators is linear and sequential; that is, they activate each in sequence to the end of the line and then repeat from the beginning. This sequential activation gives the band a simple haptic rhythm. Other types of haptic patterns are conceivable, such as rhythmic pulses, flashes and sequences with more complex rhythms. 
@@ -303,13 +323,15 @@ This wristband's components include	:
 \item Arduino Mega 2560 controller board, w/ wired connectors
 \end{inparaenum}
 
+\marginpar{
 \begin{figure}
   \begin{center}
-  \includegraphics[width=\columnwidth]{images/P1130394.jpg}
+  \includegraphics[width=\marginparwidth]{images/P1130394.jpg}
   \caption{A prototype for a wearable that has a simple 1D array of LED light and vibrating motors.}
   \label{fig:marginparsample}
   \end{center}  
 \end{figure}
+}
 
 \subsection{Rubber vibration band version 2}
 This band is similar to the first band nut instead of a linear pattern, there is 3x8 array of buttons, lights and vibrating motors. Each row of this array has one button, one light and one vibrator. The buttons are programmed to activate the other two components in their row, to activate patterns across the whole array, (such as all the lights flashing at once, all vibrators at once, all red lights in sequence, all top vibrators in sequence, etc.), and to create interactive buttons games like \emph{Simon Says}.
@@ -325,37 +347,40 @@ This wristband's components include:
 \item Push buttons (push on / norm off); Each individual component has its own digital pin on the Arduino board (3x8 = 24 pins in total).
 \end{inparaenum}
 
+\marginpar{
 \begin{figure}
   \begin{center}
-  \includegraphics[width=\columnwidth]{images/P1130396.jpg}
+  \includegraphics[width=\marginparwidth]{images/P1130396.jpg}
   \caption{A prototype for a wearable that has a 3x8 array of buttons, LED lights and vibrating motors.}
   \label{fig:marginparsample}
   \end{center}  
 \end{figure}
+}
 
-\subsection{Patterns}
 The prototypes consist of simple arrays of vibrating motors and LED lights. Later prototypes add buttons to these components. What patterns can be created when using these components? The simplest are non-directional ones, such as flashing patterns [all on, then all off]. Other simulate movement using 1D and 2D transformations.
 
-\subsection{Types of Patterns}
-We have found that even the simplest patterns can convey interesting sensations with informational potential. A simple one-dimensional row of LED lights can flash in several different ways: \begin{inparaenum}[\itshape a\upshape)]
-\item it can flash all its LEDs at once
-\item it can flash in a sequential, directional pattern. 
-\item it can vary the intensity of the LEDs in a pulsating pattern
-\item it can illuminate only the red or the green LEDs, and
-\item it can flash its lights in a random pattern. 
-\end{inparaenum}
+%\subsection{Types of Patterns}
+%We have found that even the simplest patterns can convey interesting sensations with informational potential. A simple one-dimensional row of LED lights can flash in several different ways: \begin{inparaenum}[\itshape a\upshape)]
+%\item it can flash all its LEDs at once
+%\item it can flash in a sequential, directional pattern. 
+%\item it can vary the intensity of the LEDs in a pulsating pattern
+%\item it can illuminate only the red or the green LEDs, and
+%\item it can flash its lights in a random pattern. 
+%\end{inparaenum}
 
-\begin{inparaenum}[\itshape a\upshape)]
-\item flashing, non-directional ones in which all the lights or all the vibe motors activate at the same time. These might be useful, for instance, when the gamer has achieved a new level in a game;
-\item flashing, directional ones which there is a sequential activation such that they appear to point in a specific direction. These could be used when the gamer detects another player in the vicinity and the device shows the direction where the other player is located;
-\item flashing, expanding ones where a pattern is generated from a 'point of impact' and expands outwards in 2D, similar to what you might find in the 'Game of Life'
-\end{inparaenum}
+%\begin{inparaenum}[\itshape a\upshape)]
+%\item flashing, non-directional ones in which all the lights or all the vibe motors activate at the same time. These might be useful, for instance, when the gamer has achieved a new level in a game;
+%\item flashing, directional ones which there is a sequential activation such that they appear to point in a specific direction. These could be used when the gamer detects another player in the vicinity and the device shows the direction where the other player is located;
+%\item flashing, expanding ones where a pattern is generated from a 'point of impact' and expands outwards in 2D, similar to what you might find in the 'Game of Life'
+%\end{inparaenum}
 
-\subsection{Functions for Patterns}
-TBD
+%\subsection{Functions for Patterns}
+%TBD
 
 \subsection{Development of prototypes}
-Prototypes began as the simplest and least refined expression of a wearable or functional haptic device. The first prototype has simple linear arrangement of LED light and mobile phone type vibrating motors. When the connected to an Arduino micro-controller this band emits a rhythmic and visual sequential pattern that could conceivably could be used to notify band wearers of others in their vicinity. Although this band was perhaps the most simplistic band possible, it could in fact be functional in some minimal sense for a transmedia gaming experience. Also, such a minimal band would be inexpensive to manufacture and simple to program. 
+Prototypes began as the simplest and least refined expression of a wearable or functional haptic device. The first prototype has simple linear arrangement of LED light and mobile phone type vibrating motors. When the connected to an Arduino micro-controller this band emits a rhythmic and visual sequential pattern that could conceivably could be used to notify band wearers of others in their vicinity. 
+
+Although this band was perhaps the most simplistic band possible, it could in fact be functional in some minimal sense for a transmedia gaming experience. Also, such a minimal band would be inexpensive to manufacture and simple to program. 
 
 Prototypes began as the simplest and least refined expression of a wearable or functional haptic device. The first prototype has simple linear arrangement of LED light and mobile phone type vibrating motors. When the connected to an Arduino micro-controller this band emits a rhythmic and visual sequential pattern that could conceivably could be used to notify band wearers of others in their vicinity. Although this band was perhaps the most simplistic band possible, it could in fact be functional in some minimal sense for a gaming experience. 
 
@@ -369,18 +394,26 @@ Prototypes began as the simplest and least refined expression of a wearable or f
 \end{figure}
 }
 
-\section{Discussion and Conclusions}
+\section{Discussion}
 This paper has demonstrated a number of interfaces that provide wrist based vibrotactile displays. Our work has shown that providing a vibrotactile array instead of a simple vibration motor provides user with a many more pathways of receiving and perceiving information.
+
+\subsection{Component Patterns vs. Dynamic Interactive Patterns}
+Two types of patterns involved int the devices prototyped: there are the simple grids of the components themselves, and then there are the patterns which can generated using these simple components. When lights and vibrating motors can actuate in a dynamic way, then the dynamics that can be designed, such as flashes, waves and very low resolution visual images, can produce very interesting effects. 
 
 \subsection{Wearability and Testing}
 These kind of devices at the prototype stage are far from being wearable. They are typically connected to an Arduino board and have bulky components and wired connections that interfere with basic wearability. This makes testing of such devices in a natural context difficult or impossible. A question that arises is how to decide, in an evidence-based manner, which devices to develop further such that they become miniaturized and wearable. 
 
-There are two types of patterns involved: there are the simple grids of the components themselves, and then there are the patterns which can generated using these simple components. When lights and vibrating motors can actuate in a dynamic way, then the dynamics that can be designed, such as flashes, waves and very low resolution visual images, can produce very interesting effects. 
+\section{Future Work}
+Next steps in this research are:
+\begin{inparaenum}[\itshape a\upshape)]
+\item Explore various configuration of low-resolution haptic patterns that include 6, 4, 2, and 1 vibrating motors
+\item conduct more involved user studies into the affordances that such haptic arrays provide both as gaming platforms and as information displays 
+\item explore other types of rhythm and memory games suitable for such devices
+\item study appropriate spatial resolutions for haptic actuators such we can determine whether there is an optimal number suitable for both entertaining gameplay and useful informational interaction with wearers.
+\end{inparaenum}
 
-
-%\section{Future Work}
-%Wearable devices and associated technologies for developing is developing at a rapid pace.
-%Miniaturization, bearability and functionality is obviously a primary concern of such devices. 
+\section{Conclusion}
+TBD
 
 \section{Acknowledgements}
 %We thank the valuable input from Patrick Crowe and all those at Xenophile Media Inc. who have great expertise in crafting transmedia narratives; Dr. Rachel Zuannon from the Graduate Design Program at Anhembi Morumbi University, Sao Paulo, Brazil.; the professors, students and staff within OCAD University's Digital Futures Initiative (DFI) for their valuable input and helpful comments. The following students within the DFI program worked on this project over many months: Hudson Pridham, Ryan Maksymic, Jessica Peter and Boris Kourtoukov. We thank Dr. Steve Szigeti for his contributions to this project and we especially thank Dr. Sara Diamond, President of OCAD University for her guidance and support.
