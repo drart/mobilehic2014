@@ -246,8 +246,29 @@ Our demo experiences focus on an attempt to make the interactions very simple, s
 % ======================================================================
 \section{Related Work}
 % ======================================================================
+Single haptic actuators placed on the volar part of the wrist are found in Gauntlet, a wearable user interface for ubiquitous gaming \cite{martins2008gauntlet}. Martins reports that some users found the haptic feedback intrusive and disconcerting at first.
+
+Vibro-tasctile stimulation has the advantage of being non-disruptive \cite{matscheko2010tactor} and notes that user perception depends on haptic notification not distracting from primary tasks. 
+
+Wrist wearables must fit on wrists and must not have excessive tactor density.  
+Matscheko notes that physiognomic studies innate that average U.S. male wrists circumferences are 18.38cm and 14.8cm for women. A minimum threshold distance, that is, the minimum distance that people are able to discriminate between actuators on the wrist or forearm is 38mm \cite{matscheko2010tactor}. This gives a fairly constrained amount of wrist 'real estate' available if the purpose is to transmit discrete symbolic messages using the actuators. 
+
+A wrist-worn haptic device for swimmers is described in \cite{forster2009non}.
+
+Lee and Starner describe patterning for wrist-worn tactile displays \cite{lee2010buzzwear}. They note that for these patterns, intensity is the most difficult parameter to distinguish and that the temporal parameter is the easiest. Reaction time to perceive tactile alerts was not deteriorated by visual distraction. 
+
+Chen at al. examine where to place actuators on the wrist. They reason that if a mobile device is to be worn like a watch, then factors can be placed on both sides of the wrist (that is, both the dorsal and volar sides) \cite{chen2008tactor}. 
+
+Various types of tactor wrist arrays can be found in the literature:  a 3x3 array \cite{chen2008tactor}, a 3 tactor circular array \cite{lee2010buzzwear} and a 4x1 wrist-encircling array \cite{matscheko2010tactor}.
+
+Wrist-worn actuators serve many functions including: 
+assessment of cognitive performance in the elderly \cite{ivorra2008minimally},
+notification during gaming \cite{martins2008gauntlet},
+discrete patterns for alerts for the on-the-go users \cite{lee2010buzzwear}, \cite{chen2008tactor}. 
 
 Ruspini provides a useful introduction to the concepts and history of haptics, the basics of haptic psychophysics and haptic devices past and present \cite{ruspini1999haptics}.
+
+MacLean notes the importance of touch in human perception and the fact that touch is the earliest sense to develop. She also notes the marginization of touch in most computer interfaces \cite{maclean2008haptic}. 
 
 Bronner notes that a sense of touch is basic to human processes of testing, expressing reality and meaning. Often people must both see with their own eyes as well as touch with their own hands to believe in a phenomenon\cite{bronner1982haptic}. He also notes that people surround themselves with particular, touchable objects to reinforce their own feelings and identities. 
 
@@ -414,6 +435,8 @@ Two types of patterns involved int the devices prototyped: there are the simple 
 The resolution of the haptic channel on the wrist in both the spatial and temporal dimensions are not fully studied. The next prototypes will include different sizes of vibrotactile arrays so that we may figure out how many motors are required to maximize the information reception through the tactile channel in the wrist. Specifically, are going to build and test devices that include 6, 4, 2, and 1 vibrating motors. 
 
 In addition to gaming applications, the devices will be used for encoding more critical information and testing the effectiveness of non-gaming contexts with vibrotactile arrays. We are currently developing a method of authoring the vibration sequences so that they may be more effectively created, stored, processed, and shared. 
+
+One approach to the authoring task is to compose rhythmic sequences as types of musical compositions. The text-based music notation software Lilypond \cite{nienhuys2003lilypond} could be used for this purpose. Output of midi events from composition defined in Liypond could then up uploaded directly onto the Arduino micro-controller board using the Arduino midi library \cite{best2014arduinoMidi}. As noted in \cite{lee2010buzzwear} that temporal pattern is the most easily distinguishable parameter for wrist tactile patterns is may make sense to involve musical approaches, which also deal with temporal patterning. This integration of well-established musical composition techniques with haptic patterning seems especially promising. 
 
 \section{Conclusion}
 Vibrotactile arrays present new possibilities for information display to users through their body. We have demonstrated the use of a wearable multichannel vibrotactile display intended for gaming in order to explore the uses and affordances in a non-critical usage scenario. 
