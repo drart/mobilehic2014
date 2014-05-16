@@ -102,14 +102,13 @@ In this paper we describe the design process of expanding vibrotactile displays 
 \section{Introduction}
 % ===========================================================================
 
-Vibrotactile displays allow for a variety of information communication scenarios, most compelling for use are those where the user can receive information without having to look at the signifying device \cite{matscheko2010tactor,maclean2009putting}. Gaming provides a venue for tactile feedback, often used to enhance immersion into the experience.  This project explores whether it is possible to create wearable gaming experiences that involve visual and vibrotactile spatial and temporal patterns. While there are many examples of projects that do this [LIST SOME HERE], they are tethered to on screen experiences. This project uses an wearable device that is able to offer play experiences to the wearer without being tethered to another device. 
+Vibrotactile displays allow for a variety of information communication scenarios, most compelling for use are those where the user can receive information without having to look at the signifying device \cite{matscheko2010tactor,maclean2009putting}. Gaming provides a venue for tactile feedback, often used to enhance immersion into the experience.  This project explores whether it is possible to create wearable gaming experiences that involve visual and vibrotactile spatial and temporal patterns. While there are many examples of projects that do this they are almost certainly tethered to on screen experiences. This project uses an wearable device that is able to offer play experiences to the wearer without being tethered to another device. 
 
 Our approach is to explore the simplest of patterns and study their affordances. The patterns are presented to the user both visually and through tactile stimulus. As the games progress the pattern is presented only through tactile stimulus. The goal is to determine the spatial and temporal resolution of the wrist for tactile stimulus. 
 
 Our demo experiences focus on an attempt to make the interactions very simple, such that they convey information in a way that presents few cognitive demands on the user and which the user would tend to find enjoyable and engaging, even if they were not participating in a mobile game. 
 
 %The patterns generated may involve movement and may have directionality. These patterns may be useful in the conveyance of some information, such as the state of a game, a device or the gamer. The pattern may also be a signalling device within a game device to inform the gamer about some situation within her gaming or external environment.
-
 
 %Some  research questions of interest to us are:
 %\begin{inparaenum}[\itshape a\upshape)]
@@ -201,7 +200,6 @@ Our demo experiences focus on an attempt to make the interactions very simple, s
 
 %At its simplest, user interactions involves pressing a button. Buttons can be used to select a pattern, to play a game involving flashing lights such as 'Simon Says' or to acknowledge a signal provided by the lights and vibrating motors.  
 
-
 %Wearable devices are often hooked up wirelessly to other machines or devices. For instance, gaming controllers provide users with the opportunity to expertly control a game experience. However, game controllers are purpose-driven devices that provide little utility when not connected to the game experience. While there have been many interesting uses of game controllers outside of game experiences, the controllers themselves rely on being attached to hardware in order to have any function. 
 
 %Therefore, wearable device could have functions independent of other devices. They could be self-sufficient in their functionality. The patterns they present to the user could have some value outside the context of a larger gaming environment. 
@@ -254,7 +252,7 @@ HandJive is a handheld device used for communication and play between people \ci
 Wrist wearables must fit on wrists and must not have excessive tactor density.  
 Matscheko notes that physiognomic studies innate that average U.S. male wrists circumferences are 18.38cm and 14.8cm for women. A minimum threshold distance, that is, the minimum distance that people are able to discriminate between actuators on the wrist or forearm is 38mm \cite{matscheko2010tactor}. This gives a fairly constrained amount of wrist 'real estate' available if the purpose is to transmit discrete symbolic messages using the actuators. 
 
-Single haptic actuators placed on the volar part of the wrist are found in Gauntlet, a wearable user interface for ubiquitous gaming \cite{martins2008gauntlet}. Martins reports that some users found the haptic feedback intrusive and disconcerting at first.  Various types of tactor wrist arrays can be found in the literature:  a 3x3 array \cite{chen2008tactor}, a 3 tactor circular array \cite{lee2010buzzwear} and a 4x1 wrist-encircling array \cite{matscheko2010tactor}.
+Various types of tactor wrist arrays can be found in the literature:  a 3x3 array \cite{chen2008tactor}, a 3 tactor circular array \cite{lee2010buzzwear} and a 4x1 wrist-encircling array \cite{matscheko2010tactor}.
 
 
 %Vibro-tactile stimulation has the advantage of being non-disruptive \cite{matscheko2010tactor} and notes that user perception depends on haptic notification not distracting from primary tasks. 
@@ -287,7 +285,7 @@ Chen at al. examine where to place actuators on the wrist. They reason that if a
 In our research we have built prototypes that build on previous research to explore the ways that very simple tactile and visual signals can provoke rich play. Our prototypes explore the use of the whole wrist, including the sides, as a site of vibrotactile information display. 
 
 % ======================================================================
-\section{Prototypes and Case Studies}
+\section{Prototypes}
 % ======================================================================
 
 
@@ -295,7 +293,7 @@ In our research we have built prototypes that build on previous research to expl
 \begin{figure}
   \begin{center}
   \includegraphics[width=\marginparwidth]{images/P1130375.jpg}
-  \caption{A wearable version of the traditional Simon Says game. The LEDs flash in a random pattern. The wearer must repeat the pattern flashed by the LEDs by pressing the buttons directly adjacent to each LED.}
+  \caption{A wearable version of the traditional Simon Says game. The wearer repeats flashed visual patterns by pressing buttons adjacent to each LED.}
   \label{fig:simonSays}
   \end{center}  
 \end{figure}
@@ -307,15 +305,13 @@ In our research we have built prototypes that build on previous research to expl
   \begin{center}
   \includegraphics[width=\marginparwidth]{images/P1130394.jpg}
   \caption{A prototype for a wearable that has a simple 1D array of LED light and vibrating motors.}
-  \label{fig:marginparsample}
+  \label{fig:rubberBand1}
   \end{center}  
 \end{figure}
 }
 
 \subsection{Simon Says Wristband}
-Description: this is a wearable version of the traditional \emph{Simon Says} game mounted into a velcro and felt wristband.  It is sewn onto a flexible felt band. Conductive thread connects components, which aids wearability. The game is controlled by four push buttons, each with a corresponding LED light. This forms a 2x2 button and light matrix. The LEDs flash in a random pattern to begin a game session. 
-
-A single vibration motor signals the beginning of a new game. To play the game the wearer repeats the pattern as flashed by the LEDs by pressing the buttons directly adjacent to each LED. The button and light array affords simple gaming possibilities. The components are low profile and are integrated into a device that is lightweight and comfortable to wear. 
+This is a wearable version of the traditional \emph{Simon Says} game mounted onto a flexible velcro and felt wristband (see Figure~\ref{fig:simonSays}). The game is controlled by four push buttons each with a corresponding LED light. The LEDs flash in a random pattern and a single vibration motor signals the beginning of a new game. To play the game the wearer repeats the pattern as flashed by the LEDs by pressing the buttons directly adjacent to each LED. 
 
 %This wristband's components are:
 %\begin{inparaenum}[\itshape a\upshape)]
@@ -349,9 +345,7 @@ A single vibration motor signals the beginning of a new game. To play the game t
 %\end{figure}
 
 \subsection{Rubber vibration band version 1}
-This wrist band with a thick rubber band has vibrating motors and LED lights. Vibrating motors and lights are arranged linearly with motors alternating with lights. It is connected to and controlled by an Arduino Mega board. The activation pattern of the lights and vibrators is linear and sequential; that is, they activate each in sequence to the end of the line and then repeat from the beginning. This sequential activation gives the band a simple haptic rhythm. Other types of haptic patterns are conceivable, such as rhythmic pulses, flashes and sequences with more complex rhythms. 
-
-The device is very thick and can?t be worn (some components come out the back of the device). It is also hard-wired to an Arduino board, which also prevents wearability. The device has no input buttons or other input devices. The device makes a repetitive rhythmic sound by nature of its simple looping activation pattern. Other activation patterns could be programmed using the same components. These rhythms can be enjoyed in their own right as simple proto-musical patterns. Rhythmic, haptic patterns could also convey certain types of information, such as game mode, beginning of new sessions, ends of a session, arrival into a new playing zone, etc. 
+This wrist band with a thick rubber band has vibrating motors and LED lights (see Figure~\ref{fig:rubberBand1}). Vibrating motors and lights are arranged linearly with motors alternating with lights. It connects to and is controlled by an Arduino Mega microcontroller board. The prototype device is thick and unfortunately can't be worn (some components come out the back of the device). The device has no input buttons or other input devices. 
 
 %This wristband's components include	:
 %\begin{inparaenum}[\itshape a\upshape)]
@@ -363,13 +357,12 @@ The device is very thick and can?t be worn (some components come out the back of
 
 
 
-
 \marginpar{
 \begin{figure}
   \begin{center}
   \includegraphics[width=\marginparwidth]{images/P1130396.jpg}
   \caption{A prototype for a wearable that has a 3x8 array of buttons, LED lights and vibrating motors.}
-  \label{fig:38wearable}
+  \label{fig:rubberBand2}
   \end{center}  
 \end{figure}
 }
@@ -384,9 +377,12 @@ The device is very thick and can?t be worn (some components come out the back of
 \end{figure}
 }
 \subsection{Rubber vibration band version 2}
-This band is similar to the first band nut instead of a linear pattern, there is 3x8 array of buttons, lights and vibrating motors. Each row of this array has one button, one light and one vibrator. The buttons are programmed to activate the other two components in their row, to activate patterns across the whole array, (such as all the lights flashing at once, all vibrators at once, all red lights in sequence, all top vibrators in sequence, etc.), and to create interactive buttons games like \emph{Simon Says}.
+This band is similar to the first band but instead of a linear pattern, there is 3x8 array of buttons, lights, and vibrating motors (see Figure~\ref{fig:rubberBand2}). Each row of this array has one button, one light and one vibrator that are all independent, allowing for the creation of interactive buttons games like \emph{Simon Says}. The 3x8 matrix starts to afford more possibilities for user interaction. Modal play becomes possible since many types of user notifications are possible with such an array. 
 
-It is not possible to wear in its current configuration due to the connection to its controlling Arduino board and thickness of its components.  The 3x8 matrix starts to afford some interesting possibilities for user interaction. Modal play becomes possible since there are so many types of signals possible. For instance, all red lights could flash to indicate entering into a certain game mode. Therefore, some plausible use cases for the wristband could involve a simple wearable game involving button pushing; it could become the target device for authoring of light and vibration patterns, or it could be signalling device (if connected to wireless components) when in proximity to people or objects.
+\subsection{Wearable Vibrotactile Game Interface}
+The final interface (see Figure~\ref{fig:felt2}) utilizes the learnings in the rubber band prototypes, combining visual and tactile feedback, with a form factor that is able to be comfortably worn, like our first prototype. Additionally, the buttons on the final interface are soft buttons that are activated by pressing on the tactors. 
+
+\subsection{Informal User Study}
 
 %This wristband's components include:
 %\begin{inparaenum}[\itshape a\upshape)]
@@ -397,7 +393,7 @@ It is not possible to wear in its current configuration due to the connection to
 %\item Push buttons (push on / norm off); Each individual component has its own digital pin on the Arduino board (3x8 = 24 pins in total).
 %\end{inparaenum}
 
-The prototypes consist of simple arrays of vibrating motors and LED lights. Later prototypes add buttons to these components. What patterns can be created when using these components? The simplest are non-directional ones, such as flashing patterns [all on, then all off]. Other simulate movement using 1D and 2D transformations.
+%The prototypes consist of simple arrays of vibrating motors and LED lights. Later prototypes add buttons to these components. What patterns can be created when using these components? The simplest are non-directional ones, such as flashing patterns [all on, then all off]. Other simulate movement using 1D and 2D transformations.
 
 %\subsection{Types of Patterns}
 %We have found that even the simplest patterns can convey interesting sensations with informational potential. A simple one-dimensional row of LED lights can flash in several different ways: \begin{inparaenum}[\itshape a\upshape)]
@@ -438,7 +434,7 @@ In addition to gaming applications, the devices will be used for encoding more c
 %One approach to the authoring task is to compose rhythmic sequences as types of musical compositions. The text-based music notation software Lilypond \cite{nienhuys2003lilypond} could be used for this purpose. Output of midi events from composition defined in Lilypond could then up uploaded directly onto Arduino micro-controller boards using the Arduino midi library \cite{best2014arduinoMidi}. Since temporal patterning is the most easily distinguishable parameter for wrist tactile patterns (as noted in \cite{lee2010buzzwear}), it may make sense to involve musical approaches that also deal with the design of temporal patterning.
 
 \section{Conclusion}
-Vibrotactile arrays present new possibilities for information display to users through their body. We have demonstrated the use of a wearable multichannel vibrotactile display intended for gaming in order to explore the uses and affordances in a non-critical usage scenario. 
+Vibrotactile arrays combine with simple visual patterns present new possibilities for information display to users through their body. We have demonstrated the use of a wearable multichannel vibrotactile and visual display intended for gaming in order to explore the uses and affordances in a non-critical usage scenario. 
 
 \section{Acknowledgements}
 %We thank the valuable input from Patrick Crowe and all those at Xenophile Media Inc. who have great expertise in crafting transmedia narratives; Dr. Rachel Zuannon from the Graduate Design Program at Anhembi Morumbi University, Sao Paulo, Brazil.; the professors, students and staff within OCAD University's Digital Futures Initiative (DFI) for their valuable input and helpful comments. The following students within the DFI program worked on this project over many months: Hudson Pridham, Ryan Maksymic, Jessica Peter and Boris Kourtoukov. We thank Dr. Steve Szigeti for his contributions to this project and we especially thank Dr. Sara Diamond, President of OCAD University for her guidance and support.
