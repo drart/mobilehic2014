@@ -110,7 +110,6 @@ Our demo experiences focus on an attempt to make the interactions very simple, s
 
 %The patterns generated may involve movement and may have directionality. These patterns may be useful in the conveyance of some information, such as the state of a game, a device or the gamer. The pattern may also be a signalling device within a game device to inform the gamer about some situation within her gaming or external environment.
 
-
 %Some  research questions of interest to us are:
 %\begin{inparaenum}[\itshape a\upshape)]
 %\item what array patterns for wearable devices are appropriate?
@@ -201,7 +200,6 @@ Our demo experiences focus on an attempt to make the interactions very simple, s
 
 %At its simplest, user interactions involves pressing a button. Buttons can be used to select a pattern, to play a game involving flashing lights such as 'Simon Says' or to acknowledge a signal provided by the lights and vibrating motors.  
 
-
 %Wearable devices are often hooked up wirelessly to other machines or devices. For instance, gaming controllers provide users with the opportunity to expertly control a game experience. However, game controllers are purpose-driven devices that provide little utility when not connected to the game experience. While there have been many interesting uses of game controllers outside of game experiences, the controllers themselves rely on being attached to hardware in order to have any function. 
 
 %Therefore, wearable device could have functions independent of other devices. They could be self-sufficient in their functionality. The patterns they present to the user could have some value outside the context of a larger gaming environment. 
@@ -290,7 +288,7 @@ Such haptic systems could help visually impaired users navigate. They would also
 In our research we have built prototypes that build on previous research to explore the ways that very simple tactile and visual signals can provoke rich play. Our prototypes explore the use of the whole wrist, including the sides, as a site of vibrotactile information display. 
 
 % ======================================================================
-\section{Prototypes and Case Studies}
+\section{Prototypes}
 % ======================================================================
 
 
@@ -298,7 +296,7 @@ In our research we have built prototypes that build on previous research to expl
 \begin{figure}
   \begin{center}
   \includegraphics[width=\marginparwidth]{images/P1130375.jpg}
-  \caption{A wearable version of the traditional Simon Says game. The LEDs flash in a random pattern. The wearer must repeat the pattern flashed by the LEDs by pressing the buttons directly adjacent to each LED.}
+  \caption{A wearable version of the traditional Simon Says game. The wearer repeats flashed visual patterns by pressing buttons adjacent to each LED.}
   \label{fig:simonSays}
   \end{center}  
 \end{figure}
@@ -306,9 +304,7 @@ In our research we have built prototypes that build on previous research to expl
 
 
 \subsection{Simon Says Wristband}
-Description: this is a wearable version of the traditional \emph{Simon Says} game mounted into a velcro and felt wristband.  It is sewn onto a flexible felt band. Conductive thread connects components, which aids wearability. The game is controlled by four push buttons, each with a corresponding LED light. This forms a 2x2 button and light matrix. The LEDs flash in a random pattern to begin a game session. 
-
-A single vibration motor signals the beginning of a new game. To play the game the wearer repeats the pattern as flashed by the LEDs by pressing the buttons directly adjacent to each LED. The button and light array affords simple gaming possibilities. The components are low profile and are integrated into a device that is lightweight and comfortable to wear. 
+This is a wearable version of the traditional \emph{Simon Says} game mounted onto a flexible velcro and felt wristband (see Figure~\ref{fig:simonSays}). Conductive thread connects components, which aids wearability. The game is controlled by four push buttons each with a corresponding LED light. This forms a 2x2 button/light matrix. The LEDs flash in a random pattern and a single vibration motor signals the beginning of a new game. To play the game the wearer repeats the pattern as flashed by the LEDs by pressing the buttons directly adjacent to each LED. The button and light array affords simple gaming possibilities. The components are low profile and are integrated into a device that is lightweight and comfortable to wear. 
 
 %This wristband's components are:
 %\begin{inparaenum}[\itshape a\upshape)]
@@ -346,15 +342,13 @@ A single vibration motor signals the beginning of a new game. To play the game t
   \begin{center}
   \includegraphics[width=\marginparwidth]{images/P1130394.jpg}
   \caption{A prototype for a wearable that has a simple 1D array of LED light and vibrating motors.}
-  \label{fig:marginparsample}
+  \label{fig:rubberBand1}
   \end{center}  
 \end{figure}
 }
 
 \subsection{Rubber vibration band version 1}
-This wrist band with a thick rubber band has vibrating motors and LED lights. Vibrating motors and lights are arranged linearly with motors alternating with lights. It is connected to and controlled by an Arduino Mega board. The activation pattern of the lights and vibrators is linear and sequential; that is, they activate each in sequence to the end of the line and then repeat from the beginning. This sequential activation gives the band a simple haptic rhythm. Other types of haptic patterns are conceivable, such as rhythmic pulses, flashes and sequences with more complex rhythms. 
-
-The device is very thick and can?t be worn (some components come out the back of the device). It is also hard-wired to an Arduino board, which also prevents wearability. The device has no input buttons or other input devices. The device makes a repetitive rhythmic sound by nature of its simple looping activation pattern. Other activation patterns could be programmed using the same components. These rhythms can be enjoyed in their own right as simple proto-musical patterns. Rhythmic, haptic patterns could also convey certain types of information, such as game mode, beginning of new sessions, ends of a session, arrival into a new playing zone, etc. 
+This wrist band with a thick rubber band has vibrating motors and LED lights (see Figure~\ref{fig:rubberBand1}). Vibrating motors and lights are arranged linearly with motors alternating with lights. It connects to and is controlled by an Arduino Mega micro-controller board. The activation pattern of the lights and vibrators is linear and sequential: they activate each in sequence to the end and then repeat from the beginning. The device makes a repetitive rhythmic sound by nature of its simple looping activation pattern. Other activation patterns could be programmed using the same components. These rhythms can be enjoyed in their own right as simple proto-musical patterns. Rhythmic, haptic patterns could also convey gameplay relevant information, such as game mode, beginning of new sessions, sessions ends, arrival into new playing zones, etc. The prototype device is thick and unfortunately can't be worn (some components come out the back of the device). The device has no input buttons or other input devices. It is also hard-wired to an Arduino board, which also prevents wearability. Wearability could be achieved by using lower profile components and miniaturized controllers. 
 
 %This wristband's components include	:
 %\begin{inparaenum}[\itshape a\upshape)]
@@ -365,9 +359,7 @@ The device is very thick and can?t be worn (some components come out the back of
 %\end{inparaenum}
 
 \subsection{Rubber vibration band version 2}
-This band is similar to the first band nut instead of a linear pattern, there is 3x8 array of buttons, lights and vibrating motors. Each row of this array has one button, one light and one vibrator. The buttons are programmed to activate the other two components in their row, to activate patterns across the whole array, (such as all the lights flashing at once, all vibrators at once, all red lights in sequence, all top vibrators in sequence, etc.), and to create interactive buttons games like \emph{Simon Says}.
-
-It is not possible to wear in its current configuration due to the connection to its controlling Arduino board and thickness of its components.  The 3x8 matrix starts to afford some interesting possibilities for user interaction. Modal play becomes possible since there are so many types of signals possible. For instance, all red lights could flash to indicate entering into a certain game mode. Therefore, some plausible use cases for the wristband could involve a simple wearable game involving button pushing; it could become the target device for authoring of light and vibration patterns, or it could be signalling device (if connected to wireless components) when in proximity to people or objects.
+This band is similar to the first band nut instead of a linear pattern, there is 3x8 array of buttons, lights and vibrating motors (see Figure~\ref{fig:rubberBand2}). Each row of this array has one button, one light and one vibrator. The buttons are programmed to activate the other two components in their row, to activate patterns across the whole array, (such as: all the lights flashing at once; all vibrators at once; all red lights in sequence; all top vibrators in sequence, etc.), and to create interactive buttons games like \emph{Simon Says}. The 3x8 matrix starts to afford some interesting possibilities for user interaction. Modal play becomes possible since many types of user notifications are possible with such an array. For instance, all red lights could flash to indicate entering into a certain game mode. Some plausible use cases for the wristband could include: a simple memory or reaction-time game involving button pushing; it could become the target device for authoring of light and vibration patterns, or it could be signalling device (if connected to wireless components) when in proximity to specific people or objects.
 
 %This wristband's components include:
 %\begin{inparaenum}[\itshape a\upshape)]
@@ -378,7 +370,7 @@ It is not possible to wear in its current configuration due to the connection to
 %\item Push buttons (push on / norm off); Each individual component has its own digital pin on the Arduino board (3x8 = 24 pins in total).
 %\end{inparaenum}
 
-The prototypes consist of simple arrays of vibrating motors and LED lights. Later prototypes add buttons to these components. What patterns can be created when using these components? The simplest are non-directional ones, such as flashing patterns [all on, then all off]. Other simulate movement using 1D and 2D transformations.
+%The prototypes consist of simple arrays of vibrating motors and LED lights. Later prototypes add buttons to these components. What patterns can be created when using these components? The simplest are non-directional ones, such as flashing patterns [all on, then all off]. Other simulate movement using 1D and 2D transformations.
 
 
 \marginpar{
@@ -386,7 +378,7 @@ The prototypes consist of simple arrays of vibrating motors and LED lights. Late
   \begin{center}
   \includegraphics[width=\marginparwidth]{images/P1130396.jpg}
   \caption{A prototype for a wearable that has a 3x8 array of buttons, LED lights and vibrating motors.}
-  \label{fig:38wearable}
+  \label{fig:rubberBand2}
   \end{center}  
 \end{figure}
 }
