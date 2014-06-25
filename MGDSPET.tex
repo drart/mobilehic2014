@@ -88,7 +88,11 @@
 %Framing the article around game controllers might be problematic since we do not return to this concept, nor do we address portable game devices or smart phones. Some phrasing, such as "and which the user would tend to find enjoyable and engaging even if they were not participating in a mobile game" suggests that the wearable can also be a controller, which it can't. Reframed regarding wearable tech for children w/ simple interaction as response to price demands and lack of smartphone integration.
 %The recent launch of products such as Google Glass and the Pebble Smartwatch indicate a growing public interest in wearable personal electronics. However, outside of physical activity monitors and GPS trackers aimed at parents, few products are aimed towards younger users. In this paper, we explore techniques for designing wearable game devices for children aged 8-12. We describe a series of demo experiences which use simple visual and vibrotactile patterning to which add sensory interest to gameplay as well as convey useful information about game dynamics.
 
-In this paper we describe the design process of expanding vibrotactile displays from single channels devices to multichannel vibrotactile displays. The purpose for this exploration is to add simple, interactive visual and vibrotactile patterning to wearable gaming devices. In order to facilitate movement we have created numerous prototypes to examine the affordances and limitations of a wrist-encircling pattern of tactors.
+In this paper we explore the design, layout and configuration of wrist-wearable, haptic gaming interfaces, which involve visual and vibrotactile spatial and temporal patterns. Our goal is to determine overall layouts and spatial and temporal resolutions on the wrist suitable for interactive tactile stimuli. Our approach is to first explore the simplest of configurative patterns that are intended to encircle the wrist, and then study their affordances. We describe various informal user studies we have employed to explore and test issues that arose.
+
+%This exploration involves design of layouts, spacings and resolutions of input and output components, an of simple user interactions suitable for gaming using interactive patterns of lights, buttons and tactors.  
+
+%In this paper we describe the design process of expanding vibrotactile displays from single channels devices to multichannel vibrotactile displays. The purpose for this exploration is to add simple, interactive visual and vibrotactile patterning to wearable gaming devices. In order to facilitate movement we have created numerous prototypes to examine the affordances and limitations of a wrist-encircling pattern of tactors.
 
 \end{abstract}
 
@@ -101,9 +105,11 @@ In this paper we describe the design process of expanding vibrotactile displays 
 % ===========================================================================
 \section{Introduction}
 % ===========================================================================
+Tactile feedback is often used in gaming to enhance immersive experiences. Vibrotactile arrays on wearable devices can enable a variety of information communication scenarios, the most compelling of which is when they enable users to receive information without having to look at a signifying device \cite{matscheko2010tactor,maclean2009putting}. There are many examples of projects that do this tethered to devices with screens. This project uses an wearable device that is able to offer self-sufficient gaming experiences that need not be tethered to other devices. The patterns are presented to the user using these wearable devices involve both visually and tactile stimului. 
 
-Vibrotactile displays allow for a variety of information communication scenarios, most compelling for use are those where the user can receive information without having to look at the signifying device \cite{matscheko2010tactor,maclean2009putting}. Gaming provides a venue for tactile feedback, often used to enhance immersion into the experience.  This project explores whether it is possible to create wearable gaming experiences that involve visual and vibrotactile spatial and temporal patterns. While there are many examples of projects that do this they are almost certainly tethered to screen experiences. This project uses an wearable device that is able to offer play experiences to the wearer without being tethered to another device. 
+We focus on simple wrist-encircling devices. We chose this type of device because of their potential for simplicity of design and manufacture, their radial symmetry and modularity, their possible suitability for wrists of various sizes and their potential as wearable devices possessing some aesthetic appeal beyond their core functionality as game interfaces. 
 
+%As the games progress the pattern is presented only through tactile stimulus. 
 
 \marginpar{
 \begin{figure}
@@ -114,10 +120,8 @@ Vibrotactile displays allow for a variety of information communication scenarios
   \end{center}  
 \end{figure}
 }
-Our approach is to explore the simplest of patterns and study their affordances. The patterns are presented to the user both visually and through tactile stimulus. As the games progress the pattern is presented only through tactile stimulus. The goal is to determine the spatial and temporal resolution of the wrist for tactile stimulus. 
 
-Our demo experiences focus on an attempt to make the interactions very simple, such that they convey information in a way that presents few cognitive demands on the user and which the user would tend to find enjoyable and engaging, even if they were not participating in a mobile game. 
-
+Our demo experiences focus on an attempt to make the interactions very simple, such that they convey information in a way that presents few cognitive demands and which the user would tend to find enjoyable and engaging, even if they were not participating in a mobile game. 
 
 %The patterns generated may involve movement and may have directionality. These patterns may be useful in the conveyance of some information, such as the state of a game, a device or the gamer. The pattern may also be a signalling device within a game device to inform the gamer about some situation within her gaming or external environment.
 
@@ -254,45 +258,42 @@ Our demo experiences focus on an attempt to make the interactions very simple, s
 % ======================================================================
 \section{Related Work}
 % ======================================================================
-Wrist-worn tactors serve many functions including: assessment of cognitive performance in the elderly \cite{ivorra2008minimally}, notification during gaming \cite{martins2008gauntlet}, discrete patterns for alerts for on-the-go users \cite{lee2010buzzwear,chen2008tactor}. A wrist-worn haptic device for swimmers is described in \cite{forster2009non} and an assistive technology wayfinding project is described in \cite{Jesus-Oliveira:2013aa}.
+Wrist-worn tactors serve many functions including: assessment of cognitive performance in the elderly \cite{ivorra2008minimally}, notification during gaming \cite{martins2008gauntlet}, discrete patterns for alerts for on-the-go users \cite{lee2010buzzwear,chen2008tactor}. A wrist-worn haptic device for swimmers is described in \cite{forster2009non} and as assistive technology for wayfinding \cite{Jesus-Oliveira:2013aa}.
 
 %Oliveira and Maciel propose a network of haptic actuators that use a set of patterns to express elements of an environment that has obstacles and free paths and demonstrates the use of a haptic language that helps users navigate and consists of vibrotactile signs to complement or replace their vision. \cite{Jesus-Oliveira:2013aa}
 
 HandJive is a handheld device used for communication and play between people \cite{fogg1998handjive}. Researchers found that participants were able to successfully replicate purely haptic patterns at increasing levels of difficulty in a gameplay situation, and enjoyed improvising their own patterns. These findings suggest that haptic feedback can be incorporated as an enjoyable and meaningful way of conveying game information.
 
 Wrist wearables must fit on wrists and must not have excessive tactor density.  
-Matscheko notes that physiognomic studies indicate that average U.S. wrist circumferences are 18.38cm for men and 14.8cm for women. A minimum threshold distance, the minimum distance on the wrist or forearm between which people are able to discriminate tactors is 38mm \cite{matscheko2010tactor}. This provides a limited amount of wrist 'real estate,' if the purpose is to transmit discrete symbolic messages using the tactors. 
+Matscheko notes that physiognomic studies indicate that average U.S. wrist circumferences are 18.38cm for men and 14.8cm for women. A minimum threshold distance, the minimum distance on the wrist or forearm between which people are able to discriminate tactors is 38mm \cite{matscheko2010tactor}. This provides a limited amount of wrist 'real estate,' if the purpose is to transmit discrete symbolic messages using tactors. However, it is not clear that tactors on the wrist are suitable for transmitting discrete symbolic messages. 
 
 Various types of tactor wrist arrays can be found in the literature:  a 3x3 array \cite{chen2008tactor}, a 3 tactor circular array \cite{lee2010buzzwear} and a 4x1 wrist-encircling array \cite{matscheko2010tactor}.
 
 %Vibro-tactile stimulation has the advantage of being non-disruptive \cite{matscheko2010tactor} and notes that user perception depends on haptic notification not distracting from primary tasks. 
 
-
-Lee and Starner describe patterning for wrist-worn tactile displays \cite{lee2010buzzwear}. They note that for these patterns, intensity is the most difficult parameter to distinguish and that the temporal parameter is the easiest. Reaction time to perceive tactile alerts was not deteriorated by visual distraction. 
-
+Lee and Starner describe patterning for wrist-worn tactile displays \cite{lee2010buzzwear}. They note that for these patterns, intensity is the most difficult parameter to distinguish and that the temporal parameter is the easiest. %Reaction time to perceive tactile alerts was not deteriorated by visual distraction. 
 
 %Ruspini provides a useful introduction to the concepts and history of haptics, the basics of haptic psychophysics and haptic devices past and present \cite{ruspini1999haptics}.
 
 %MacLean notes the importance of touch in human perception and the fact that touch is the earliest sense to develop. She also notes the marginization of touch in most computer interfaces \cite{maclean2008haptic}. 
 
-Bronner notes that a sense of touch is basic to human processes of testing, expressing reality and meaning. Often people must both see with their own eyes as well as touch with their own hands to believe in a phenomenon\cite{bronner1982haptic}. He also notes that people surround themselves with particular, touchable objects to reinforce their own feelings and identities. 
+Bronner notes that a sense of touch is basic to human processes of testing, expressing reality and meaning {bronner1982haptic}. 
+
+%Often people must both see with their own eyes as well as touch with their own hands to believe in a phenomenon\cite{bronner1982haptic}. He also notes that people surround themselves with particular, touchable objects to reinforce their own feelings and identities. 
 
 %MacLean \cite{maclean2009putting} discusses the potential benefits of haptic feedback as an ambient notification system. Unlike visual information, which can be obtrusive while completing a task, or sound, which can be obnoxious in a public environment, haptic feedback is usually experienced only by the user and does not directly interfere with the task at hand. 
 
 %Profita et al. \cite{profita2013don} of studies completed in the United States and South Korea on the social acceptability of interacting with on-body controllers in which participants  ranked factors such as `awkwardness` and `coolness` of the exhibited interactions as actors performed them. This article is helpful for providing insight on social acceptability of wearable positioning as it relates to gender and culture.
 
-
 %De Jesus Oliveira and Maciel \cite{Jesus-Oliveira:2013aa} present research towards building a hand-mounted array of haptic actuators intended to help the wearer perform a variety of tasks including orientation. 
 
 %They propose that the actuators could be connected to environment-aware sensors so that the actuators would vibrate in a set pattern to alert the wearer of an obstacle (or help instruct them to perform a certain task). 
 
-
 %\cite{williams2006exploring}Williams, Amanda and Scott present Damage, a smart bracelet for interactions between groups of users. Damage emerged as the result of participants' responses to another project, the social media application Slam. With Slam, participants liked the app and the feeling of being always connected to their social circle, but found the frequent vibrational alerts from their phones as a result of a message being sent or received frustrating. Though at the time of writing still a work-in-progress, Damage would allow users to send coded messages in the form of flashing LEDs embedded in the bracelet to the group by opening and closing snap closures. Though the sender can choose whether to send a red, blue or green LED, ultimately it is up for the users to decide/interpret what each message means. This allows for potentially rich information to be transmitted by the simple device, in a manner that is convenient and unobtrusive to monitor.
 
+Chen at al. examine tactor placement on the wrist. They reason that if a mobile device is to be worn like a watch, then factors can be placed on both sides of the wrist (that is, both the dorsal and volar sides) \cite{chen2008tactor}. 
 
-Chen at al. examine where to place tactors on the wrist. They reason that if a mobile device is to be worn like a watch, then factors can be placed on both sides of the wrist (that is, both the dorsal and volar sides) \cite{chen2008tactor}. 
-
-In our research we have built prototypes that build on previous research to explore the ways that very simple tactile and visual signals can provoke rich play. Our prototypes explore the use of the whole wrist, including the sides, as a site of vibrotactile information display. 
+In our research we have built prototypes that build on previous research to explore the ways that very simple tactile and visual signals can provoke rich play. Our prototypes explore the use of the whole wrist, including the sides, as a site of vibrotactile stimulus and information display. 
 
 % ======================================================================
 \section{Prototypes}
@@ -309,7 +310,6 @@ In our research we have built prototypes that build on previous research to expl
 \end{figure}
 }
 
-
 \marginpar{
 \begin{figure}
   \begin{center}
@@ -321,9 +321,13 @@ In our research we have built prototypes that build on previous research to expl
 }
 
 \subsection{Simon Says Wristband}
-This is a wearable version of the traditional \emph{Simon Says} game mounted onto a flexible velcro and felt wristband (see Figure~\ref{fig:simonSays}). The game is controlled by four push buttons each with a corresponding LED light. The LEDs flash in a random pattern and a single vibration motor signals the beginning of a new game. To play the game the wearer repeats the pattern as flashed by the LEDs by pressing the buttons directly adjacent to each LED. 
+This is a wearable version of the traditional \emph{Simon Says} game mounted onto a flexible velcro and felt wristband (see Figure~\ref{fig:simonSays}). The game is controlled by four push buttons each with a corresponding LED light. Simon Says is an interactive memory game in which wearers repeat visual and tactile patterns. We found that gamers bored quickly from such a game, yet we discovered that vibrotactile patterns did inspire interest, which we explored in subsequent prototypes. 
 
-This prototype was meant to test autonomous wearable games, and while it was a successful simple game, users became bored quickly. The major interest in the users was with the tactor, thus we expanded the vibrotactile component in subsequent versions. 
+%The intent of this all subsequent explorations is to produce wrist-wearable devices. 
+
+%The LEDs flash in a random pattern and a single vibration motor signals the beginning of a new game. To play the game the wearer repeats the pattern as flashed by the LEDs by pressing the buttons directly adjacent to each LED. 
+
+%This prototype was meant to test autonomous wearable games, and while it was a successful simple game, users became bored quickly. The major interest in the users was with the tactor, thus we expanded the vibrotactile component in subsequent versions. 
 
 %This wristband's components are:
 %\begin{inparaenum}[\itshape a\upshape)]
@@ -357,9 +361,7 @@ This prototype was meant to test autonomous wearable games, and while it was a s
 %\end{figure}
 
 \subsection{Rubber vibration band version 1}
-This wrist band with a thick rubber band has vibrating motors and LED lights (see Figure~\ref{fig:rubberBand1}). Vibrating motors and lights are arranged linearly with motors alternating with lights. It connects to and is controlled by an Arduino Mega microcontroller board. The prototype device is thick and unfortunately can't be worn (some components come out the back of the device). The device has no input buttons or other input devices. 
-
-Users were stimulated by the multiple tactors and spent time imagining other sequences of vibration they were interested in feeling. Users also noted that they wanted an interaction channel, not a simple display device. 
+This wrist band with a thick rubber band has vibrating motors and LED lights (see Figure~\ref{fig:rubberBand1}). Vibrating motors and lights are arranged linearly controlled by an Arduino Mega micro-controller board. Users were stimulated by the multiple tactors and spent time imagining other possible vibration patterns. The idea that wrist-encircling vibrotactile simulation and encoding is attractive to some users was confirmed, despite the crude prototypical nature of the device. Users also noted that they wanted an interaction channel, not afforded by a simple output-only device. 
 
 %This wristband's components include	:
 %\begin{inparaenum}[\itshape a\upshape)]
@@ -368,8 +370,6 @@ Users were stimulated by the multiple tactors and spent time imagining other seq
 %\item rubber band (conveyor belt material)
 %\item Arduino Mega 2560 controller board, w/ wired connectors
 %\end{inparaenum}
-
-
 
 \marginpar{
 \begin{figure}
@@ -384,10 +384,14 @@ Users were stimulated by the multiple tactors and spent time imagining other seq
 \subsection{Rubber vibration band version 2}
 This band is similar to the first band but instead of a linear pattern, there is 3x8 array of buttons, lights, and vibrating motors (see Figure~\ref{fig:rubberBand2}). Each row of this array has one button, one light and one vibrator that are all independent, allowing for the creation of interactive buttons games like \emph{Simon Says}. The 3x8 matrix starts to afford more possibilities for user interaction. Modal play becomes possible since many types of user notifications are possible with such an array. 
 
-\subsection{Wearable Vibrotactile Game Interface}
-The final interface (see Figure~\ref{fig:felt2}) utilizes the learnings in the rubber band prototypes, combining visual and tactile feedback, with a form factor that is able to be comfortably worn, like our first prototype. Additionally, the buttons on the final interface are soft buttons that are activated by pressing on the tactors. The tactors are placed 1cm from one another, or two 2cm from center to center. 
+\subsection {Final prototype}
+The final interface (see Figure~\ref{fig:felt2}) utilizes lessons learned from the rubber band prototypes, combining visual and tactile feedback with a form factor that is able to be comfortably worn. Buttons are soft buttons activated by pressing on tactors. The final prototype lead to user sessions that increased in length. We found that users could successfully play the Simon Says game using only the vibrotactile channel. 
 
-The final prototype combines the user feedback from previous iterations with the software development advances made during the rubber vibration band phases. The final prototype lead to user session length increase. Users were able to successfully play the Simon Says game with only the vibrotactile channel. 
+%The tactors are placed 1cm from one another, or two 2cm from center to center. 
+%The final prototype combines the user feedback from previous iterations with the software development advances made during the rubber vibration band phases. 
+
+\section{Wearable Vibrotactile Game Interfaces}
+Users studies suggested that for conveyance of symbolic information wrist-encircling haptic devices have their challenges. As purely simulation that are attractive to users especially when users can modify or author various vibrotractile patterns. Simons Says games can be played using tactile as well as visual cueing yet this type of game quickly becomes boring for users. It is not clear how such games could be generalized and made more challenging. One approach that does seem promising is the use of wrist devices for decorative and aesthetic purposes, as expressive devices for customized visual and vibrotactile authoring and for deployment of various signals, which are easy to distinguish between each other but which may lack clear self-explanatory symbolic content such as afforded, for example, by small high resolution OLED screens. 
 
 %This wristband's components include:
 %\begin{inparaenum}[\itshape a\upshape)]
@@ -432,9 +436,11 @@ The final prototype combines the user feedback from previous iterations with the
 %These kind of devices at the prototype stage are far from being wearable. They are typically connected to an Arduino board and have bulky components and wired connections that interfere with basic wearability. This makes testing of such devices in a natural context difficult or impossible. A question that arises is how to decide, in an evidence-based manner, which devices to develop further such that they become miniaturized and wearable. 
 
 \section{Future Work}
-The resolution of the haptic channel on the wrist in both the spatial and temporal dimensions are not fully studied. The next prototypes will include different sizes of vibrotactile arrays so that we may figure out how many motors are required to maximize the information reception through the tactile channel in the wrist. Specifically, are going to build and test devices that include six, four, and two tactors. 
+Wrist-encircling devices that employ modularity of construction, user interactivity and vibrotactile patterning appear promising areas for future exploration. We are currently developing a method of authoring the vibration sequences so that they may be more effectively created, stored, processed and shared. Such patterns are more likely to display aspects of user-defined percussive music compositions and less for the reliable exchange of symbolic information.
 
-In addition to gaming applications, the devices will be tested for encoding more critical information and measuring the effectiveness of non-gaming contexts with vibrotactile arrays. We are currently developing a method of authoring the vibration sequences so that they may be more effectively created, stored, processed, and shared. 
+%The resolution of the haptic channel on the wrist in both the spatial and temporal dimensions are not fully studied. The next prototypes will include different sizes of vibrotactile arrays so that we may figure out how many motors are required to maximize the information reception through the tactile channel in the wrist. Specifically, are going to build and test devices that include six, four, and two tactors. 
+
+%In addition to gaming applications, the devices will be tested for encoding more critical information and measuring the effectiveness of non-gaming contexts with vibrotactile arrays. 
 
 %One approach to the authoring task is to compose rhythmic sequences as types of musical compositions. The text-based music notation software Lilypond \cite{nienhuys2003lilypond} could be used for this purpose. Output of midi events from composition defined in Lilypond could then up uploaded directly onto Arduino micro-controller boards using the Arduino midi library \cite{best2014arduinoMidi}. Since temporal patterning is the most easily distinguishable parameter for wrist tactile patterns (as noted in \cite{lee2010buzzwear}), it may make sense to involve musical approaches that also deal with the design of temporal patterning.
 
@@ -449,7 +455,7 @@ In addition to gaming applications, the devices will be tested for encoding more
 }
 
 \section{Conclusion}
-Vibrotactile arrays combine with simple visual patterns present new possibilities for information display to users through their body. We have demonstrated the use of a wearable multichannel vibrotactile and visual display intended for gaming in order to explore the uses and affordances in a non-critical usage scenario. 
+Vibrotactile arrays combine with simple visual patterns present new possibilities for information display to users through their body. We have demonstrated the use of a wearable multichannel vibrotactile and visual display intended for gaming in order to explore the uses and affordances in scenarios involving non-critical attention and use cases. 
 
 \section{Acknowledgements}
 %We thank the valuable input from Patrick Crowe and all those at Xenophile Media Inc. who have great expertise in crafting transmedia narratives; Dr. Rachel Zuannon from the Graduate Design Program at Anhembi Morumbi University, Sao Paulo, Brazil.; the professors, students and staff within OCAD University's Digital Futures Initiative (DFI) for their valuable input and helpful comments. The following students within the DFI program worked on this project over many months: Hudson Pridham, Ryan Maksymic, Jessica Peter and Boris Kourtoukov. We thank Dr. Steve Szigeti for his contributions to this project and we especially thank Dr. Sara Diamond, President of OCAD University for her guidance and support.
