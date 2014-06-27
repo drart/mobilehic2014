@@ -105,7 +105,8 @@ In this paper we explore the design, layout and configuration of wrist-wearable,
 % ===========================================================================
 \section{Introduction}
 % ===========================================================================
-Tactile feedback is often used in gaming to enhance immersive experiences. Vibrotactile arrays on wearable devices can enable a variety of information communication scenarios, the most compelling of which is when they enable users to receive information without having to look at a signifying device \cite{matscheko2010tactor,maclean2009putting}. There are many examples of projects that do this tethered to devices with screens. This project uses an wearable device that is able to offer self-sufficient gaming experiences that need not be tethered to other devices. The patterns are presented to the user using these wearable devices involve both visually and tactile stimului. 
+
+Tactile feedback is often used in gaming to enhance immersion. Vibrotactile arrays on wearable devices can enable a variety of information communication scenarios, the most compelling of which is when they enable users to receive information without having to look at a signifying device \cite{matscheko2010tactor,maclean2009putting}. There are many examples of projects that haptic feedback that are tethered to devices with screens. This project uses a wearable device that is able to offer self-sufficient gaming experiences that need not be tethered to other devices. Patterns are presented to the user using these wearable devices involve both visual and tactile stimului. 
 
 We focus on simple wrist-encircling devices. We chose this type of device because of their potential for simplicity of design and manufacture, their radial symmetry and modularity, their possible suitability for wrists of various sizes and their potential as wearable devices possessing some aesthetic appeal beyond their core functionality as game interfaces. 
 
@@ -304,7 +305,7 @@ In our research we have built prototypes that build on previous research to expl
 \begin{figure}
   \begin{center}
   \includegraphics[width=\marginparwidth]{images/P1130375.jpg}
-  \caption{A wearable version of the traditional Simon Says game. The wearer repeats flashed visual patterns by pressing buttons adjacent to each LED.}
+  \caption{A wearable version of the \emph{Simon Says} game. The wearer repeats visual patterns by pressing buttons adjacent to each LED.}
   \label{fig:simonSays}
   \end{center}  
 \end{figure}
@@ -314,14 +315,14 @@ In our research we have built prototypes that build on previous research to expl
 \begin{figure}
   \begin{center}
   \includegraphics[width=\marginparwidth]{images/P1130394.jpg}
-  \caption{A prototype for a wearable that has a simple 1D array of LED light and vibrating motors.}
+  \caption{A prototype for a wearable that has a simple array of LEDs and vibrating motors.}
   \label{fig:rubberBand1}
   \end{center}  
 \end{figure}
 }
 
-\subsection{Simon Says Wristband}
-This is a wearable version of the traditional \emph{Simon Says} game mounted onto a flexible velcro and felt wristband (see Figure~\ref{fig:simonSays}). The game is controlled by four push buttons each with a corresponding LED light. Simon Says is an interactive memory game in which wearers repeat visual and tactile patterns. We found that gamers bored quickly from such a game, yet we discovered that vibrotactile patterns did inspire interest, which we explored in subsequent prototypes. 
+\subsection{Initial Wearable Prototype}
+This is a wearable version of the traditional \emph{Simon Says} game mounted onto a flexible velcro and felt wristband (see Figure~\ref{fig:simonSays}). The game is controlled by four push buttons each with a corresponding LED light. \emph{Simon Says} is a memory game in which wearers repeat patterns of growing length until the player is unable to recall the whole sequence. We found that gamers bored quickly from such a game, yet we discovered that vibrotactile patterns did inspire interest, which we explored in subsequent prototypes. 
 
 %The intent of this all subsequent explorations is to produce wrist-wearable devices. 
 
@@ -361,7 +362,7 @@ This is a wearable version of the traditional \emph{Simon Says} game mounted ont
 %\end{figure}
 
 \subsection{Rubber vibration band version 1}
-This wrist band with a thick rubber band has vibrating motors and LED lights (see Figure~\ref{fig:rubberBand1}). Vibrating motors and lights are arranged linearly controlled by an Arduino Mega micro-controller board. Users were stimulated by the multiple tactors and spent time imagining other possible vibration patterns. The idea that wrist-encircling vibrotactile simulation and encoding is attractive to some users was confirmed, despite the crude prototypical nature of the device. Users also noted that they wanted an interaction channel, not afforded by a simple output-only device. 
+This wrist band with a thick rubber band has eight vibrating motors and eight LED lights (see Figure~\ref{fig:rubberBand1}). Vibrating motors and lights are arranged linearly and controlled by an Arduino Mega micro-controller board. Users were stimulated by the multiple tactors and spent time imagining other possible vibration patterns. The idea that wrist-encircling vibrotactile simulation and encoding is attractive to some users was confirmed, despite the crude prototypical nature of the device. Users also noted that they wanted an interaction channel, not afforded by a simple output-only device. 
 
 %This wristband's components include	:
 %\begin{inparaenum}[\itshape a\upshape)]
@@ -375,14 +376,14 @@ This wrist band with a thick rubber band has vibrating motors and LED lights (se
 \begin{figure}
   \begin{center}
   \includegraphics[width=\marginparwidth]{images/P1130396.jpg}
-  \caption{A prototype for a wearable that has a 3x8 array of buttons, LED lights and vibrating motors.}
+  \caption{A prototype for a wearable that has an array of buttons, LEDs and vibrating motors.}
   \label{fig:rubberBand2}
   \end{center}  
 \end{figure}
 }
 
 \subsection{Rubber vibration band version 2}
-This band is similar to the first band but instead of a linear pattern, there is 3x8 array of buttons, lights, and vibrating motors (see Figure~\ref{fig:rubberBand2}). Each row of this array has one button, one light and one vibrator that are all independent, allowing for the creation of interactive buttons games like \emph{Simon Says}. The 3x8 matrix starts to afford more possibilities for user interaction. Modal play becomes possible since many types of user notifications are possible with such an array. 
+This band is similar to the first band but instead of a linear pattern, there is an array of eight buttons, eight lights, and eight vibrating motors (see Figure~\ref{fig:rubberBand2}). Each row of this array has one button, one light and one vibrator that are all independent, allowing for the creation of interactive buttons games like \emph{Simon Says}. This configuration  starts to afford more possibilities for user interaction. Modal play becomes possible since many types of user notifications are possible with such an array. 
 
 \subsection {Final prototype}
 The final interface (see Figure~\ref{fig:felt2}) utilizes lessons learned from the rubber band prototypes, combining visual and tactile feedback with a form factor that is able to be comfortably worn. Buttons are soft buttons activated by pressing on tactors. The final prototype lead to user sessions that increased in length. We found that users could successfully play the Simon Says game using only the vibrotactile channel. 
@@ -391,7 +392,7 @@ The final interface (see Figure~\ref{fig:felt2}) utilizes lessons learned from t
 %The final prototype combines the user feedback from previous iterations with the software development advances made during the rubber vibration band phases. 
 
 \section{Wearable Vibrotactile Game Interfaces}
-Users studies suggested that for conveyance of symbolic information wrist-encircling haptic devices have their challenges. As purely simulation that are attractive to users especially when users can modify or author various vibrotractile patterns. Simons Says games can be played using tactile as well as visual cueing yet this type of game quickly becomes boring for users. It is not clear how such games could be generalized and made more challenging. One approach that does seem promising is the use of wrist devices for decorative and aesthetic purposes, as expressive devices for customized visual and vibrotactile authoring and for deployment of various signals, which are easy to distinguish between each other but which may lack clear self-explanatory symbolic content such as afforded, for example, by small high resolution OLED screens. 
+Users studies suggested that for conveyance of symbolic information wrist-encircling haptic devices have their challenges. As purely simulation that are attractive to users. \emph{Simons Says} games can be played using tactile, in addition to visual cueing,  yet this type of game quickly becomes boring for users. 
 
 %This wristband's components include:
 %\begin{inparaenum}[\itshape a\upshape)]
@@ -436,7 +437,9 @@ Users studies suggested that for conveyance of symbolic information wrist-encirc
 %These kind of devices at the prototype stage are far from being wearable. They are typically connected to an Arduino board and have bulky components and wired connections that interfere with basic wearability. This makes testing of such devices in a natural context difficult or impossible. A question that arises is how to decide, in an evidence-based manner, which devices to develop further such that they become miniaturized and wearable. 
 
 \section{Future Work}
-Wrist-encircling devices that employ modularity of construction, user interactivity and vibrotactile patterning appear promising areas for future exploration. We are currently developing a method of authoring the vibration sequences so that they may be more effectively created, stored, processed and shared. Such patterns are more likely to display aspects of user-defined percussive music compositions and less for the reliable exchange of symbolic information.
+Wrist-encircling devices that employ modularity of construction, user interactivity and vibrotactile patterning appear promising areas for future exploration. We are currently developing a method of authoring the vibration sequences so that they may be more effectively created, stored, processed and shared. 
+
+One approach that does seem promising is the use of wrist devices for decorative and aesthetic purposes, as expressive devices for customized visual and vibrotactile authoring and for deployment of various signals, which are easy to distinguish between each other but which may lack clear self-explanatory symbolic content such as afforded, for example, by small high resolution OLED screens. 
 
 %The resolution of the haptic channel on the wrist in both the spatial and temporal dimensions are not fully studied. The next prototypes will include different sizes of vibrotactile arrays so that we may figure out how many motors are required to maximize the information reception through the tactile channel in the wrist. Specifically, are going to build and test devices that include six, four, and two tactors. 
 
@@ -455,7 +458,7 @@ Wrist-encircling devices that employ modularity of construction, user interactiv
 }
 
 \section{Conclusion}
-Vibrotactile arrays combine with simple visual patterns present new possibilities for information display to users through their body. We have demonstrated the use of a wearable multichannel vibrotactile and visual display intended for gaming in order to explore the uses and affordances in scenarios involving non-critical attention and use cases. 
+Vibrotactile arrays present new possibilities for information display to users through their body. We have demonstrated the use of a wearable multichannel vibrotactile and simple visual display intended for gaming in order to explore the uses and affordances in scenarios involving non-critical attention and use cases. 
 
 \section{Acknowledgements}
 %We thank the valuable input from Patrick Crowe and all those at Xenophile Media Inc. who have great expertise in crafting transmedia narratives; Dr. Rachel Zuannon from the Graduate Design Program at Anhembi Morumbi University, Sao Paulo, Brazil.; the professors, students and staff within OCAD University's Digital Futures Initiative (DFI) for their valuable input and helpful comments. The following students within the DFI program worked on this project over many months: Hudson Pridham, Ryan Maksymic, Jessica Peter and Boris Kourtoukov. We thank Dr. Steve Szigeti for his contributions to this project and we especially thank Dr. Sara Diamond, President of OCAD University for her guidance and support.
